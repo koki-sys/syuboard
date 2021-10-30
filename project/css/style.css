@@ -1,0 +1,14 @@
+body{
+    background-color:#73E2A7;
+    padding:20%;
+}
+.center{
+    text-align:center;
+}
+.box{
+    width:40%;
+    display: inline-block;
+    border-radius: 10px;
+    border:solid 1px #ffffff;
+    background-color:#ffffff;
+}
