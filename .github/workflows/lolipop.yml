@@ -16,8 +16,6 @@ jobs:
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ftps
-          server-dir: ${{ secrets.FTP_REMOTE_ROOT }}
-          local-dir: project/
+          ssh_private_key: ${{ secrets.FTP_PASSWORD }}
+          remote_path: ${{ secrets.FTP_REMOTE_ROOT }}
+          local_path: project/
