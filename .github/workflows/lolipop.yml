@@ -18,6 +18,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           ssh_private_key: ${{ secrets.FTP_PASSWORD }}
           remote_path: ${{ secrets.FTP_REMOTE_ROOT }}
-          local_path: project/
+          local_path: project/*
           port: 33360
           args: '-o ConnectTimeout=5'
