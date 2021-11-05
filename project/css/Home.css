@@ -9,3 +9,15 @@ nav {
 .collapse navbar-collapse img {
   margin-left: 500px;
 }
+
+h2{
+  color:#389B72;
+  position: absolute;
+  left: 80px;
+  top: 20; left: 80px;
+}
+
+.sured img{
+  position: absolute;
+  top: 150px; left: 300px;
+}
