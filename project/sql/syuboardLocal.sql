@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS mtag;
 
 DROP TABLE IF EXISTS owner;
 
-DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS customer;
 
 DROP TABLE IF EXISTS stag;
 
@@ -20,13 +20,13 @@ GRANT ALL ON syuboard.* TO 'staff' @'localhost' identified by 'password';
 
 USE syuboard;
 
-CREATE TABLE user (
-    userid INT AUTO_INCREMENT,
+CREATE TABLE customer (
+    customerid INT AUTO_INCREMENT,
     name VARCHAR(40) NOT NULL,
     email VARCHAR(50) NOT NULL,
     password CHAR(12) NOT NULL,
     icon_path VARCHAR(50) NOT NULL,
-    PRIMARY KEY(userid)
+    PRIMARY KEY(customerid)
 );
 
 CREATE TABLE owner(
@@ -54,20 +54,20 @@ CREATE TABLE telphone(
     groupid INT AUTO_INCREMENT,
     telId CHAR(16) NOT NULL,
     title VARCHAR(32),
-    userid INT NOT NULL,
+    customerid INT NOT NULL,
     mtagid INT NOT NULL,
     PRIMARY KEY(groupid),
-    FOREIGN KEY(userid) REFERENCES user(userid),
+    FOREIGN KEY(customerid) REFERENCES customer(customerid),
     FOREIGN KEY(mtagid) REFERENCES mtag(mtagid)
 );
 
 CREATE TABLE board(
     boardid INT AUTO_INCREMENT,
     title VARCHAR(32),
-    userid INT NOT NULL,
+    customerid INT NOT NULL,
     content VARCHAR(100),
     mtagid INT NOT NULL,
     PRIMARY KEY(boardid),
-    FOREIGN KEY(userid) REFERENCES user(userid),
+    FOREIGN KEY(customerid) REFERENCES customer(customerid),
     FOREIGN KEY(mtagid) REFERENCES mtag(mtagid)
 );
