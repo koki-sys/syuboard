@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS stag;
 
 /* 削除用SQL ここまで */
 
-// データベース作成
+--データベース作成
 CREATE DATABASE syuboard DEFAULT CHARACTER SET utf8 collate utf8_general_ci;
 
 GRANT ALL ON syuboard.* TO 'staff' @'localhost' identified by 'password';
