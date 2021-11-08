@@ -7,9 +7,13 @@ const Peer = window.Peer;
     const closeTrigger = document.getElementById("js-close-trigger");
     const remoteVideo = document.getElementById("js-remote-stream");
     const remoteId = document.getElementById("js-remote-id");
-    const stream = await navigator.mediaDevices.getDisplayMedia({
+    const stream = navigator.mediaDevices.getDisplayMedia({
         video: true,
-    });
+    }).then((mediaStream) => {
+        window.mediaStream = mediaStream;
+        remoteVideo.srcObject = mediaStream;
+        console.log("success")
+    })
     const callDisp = peer.call("remote-peerId", stream);
 
     const localStream = await navigator.mediaDevices

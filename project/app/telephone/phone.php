@@ -13,7 +13,7 @@
         <h1 class="text-center">通話サンプル</h1>
         <div class="p2p-media row">
             <div class="remote-stream col-8">
-                <video id="js-remote-stream" width="70%"></video>
+                <video id="js-remote-stream" width="70%" autoplay></video>
             </div>
             <div class="local-stream col-4">
                 <video id="js-local-stream" width="70%"></video>
