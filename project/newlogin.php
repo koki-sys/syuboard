@@ -14,15 +14,15 @@
         <div class="left">
           <label class="ms-5 mb-1 mt-3 left">ニックネーム</label><br>
         </div>
-        <input class="form-control mx-auto" type="text" name="nickname" style="width:75%"><br>
+        <input class="form-control mx-auto" type="text" name="nickname" style="width:75%" required><br>
         <div class="left">
           <label class="ms-5 mb-1 left">Email</label><br>
         </div>
-        <input class="form-control mx-auto" type="mail" size="40" name="email" style="width:75%"><br>
+        <input class="form-control mx-auto" type="mail" size="40" name="email" style="width:75%" required><br>
         <div class="left">
           <label class="ms-5 mb-1 left">パスワード</label><br>
         </div>
-        <input class="form-control mx-auto" type="password" size="40" name="password" style="width:75%"><br>
+        <input class="form-control mx-auto" type="password" size="40" name="password" style="width:75%" required maxlength="10"><br>
     </div>
       <div class="btns">
       <input type="button" value="　戻る　" onclick="location.href='Home.php'" class="btn btn-outline-secondary mb-3">

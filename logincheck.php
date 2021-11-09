@@ -1,5 +1,5 @@
 +<?php
-$email = $_POST["email"];
+$nickname = $_POST["nickname"];
 $password = $_POST["password"];
 
 $dsn = '';
@@ -8,8 +8,8 @@ $password = '';
 
     try {
         $pdo = new PDO($dsn, $user, $password);
-        $sql = $pdo -> prepare("select *,count(*) as cnt from user where  = ?");
-        $sql-> execute([$email]);
+        $sql = $pdo -> prepare("select *,count(*) as cnt from user where name = ?");
+        $sql-> execute([$nickname]);
 
         $j = true;
         foreach($sql as $row){

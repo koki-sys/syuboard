@@ -12,13 +12,13 @@
     <div class="box2">
       <form action="logincheck.php" method="post">
         <div class="left">
-          <label class="mt-3 ms-5 mb-1 left">Email</label><br>
+          <label class="mt-3 ms-5 mb-1 left">ニックネーム</label><br>
         </div>
-        <input class="form-control mx-auto" type="mail" size="40" name="email" style="width:75%"><br>
+        <input class="form-control mx-auto" type="nickname" size="40" name="email" style="width:75%" required><br>
         <div class="left">
           <label class="ms-5 mb-1 left">パスワード</label><br>
         </div>
-        <input class="form-control mx-auto" type="password" size="40" name="password" style="width:75%"><br>
+        <input class="form-control mx-auto" type="password" size="40" name="password" style="width:75%" required><br>
     </div>
       <div class="btns">
       <input type="button" value="　戻る　" onclick="location.href='Home.php'" class="btn btn-outline-secondary mb-3">
