@@ -22,11 +22,11 @@
 <div calss="container-fluid">
   <div class="row">
     <div class="keijiban">
-      <div class="sured text-center">
+      <div class="sured mx-auto">
         <a href="php"><img src="../images/index/sured.png" width="800" height="150"></a>
       </div>
-      <div class="tagu">
-        <img src="../images/index/taguitiran.png">
+      <div class="tagu mx-auto">
+        <img src="../images/index/taguitiran.png" width="800" height="30">
       </div>
   </div>
 </div>
