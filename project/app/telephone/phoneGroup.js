@@ -67,6 +67,7 @@ const Peer = window.Peer;
 
         // Render remote stream for new peer join in the room
         room.on("stream", async (stream) => {
+            // 多分ここ改造する！
             const newVideo = document.createElement("video");
             newVideo.srcObject = stream;
             newVideo.playsInline = true;
