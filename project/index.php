@@ -20,11 +20,15 @@
       </from>  
 </div>
 <div calss="container-fluid">
-    <div class="row">
+  <div class="row">
+    <div class="keijiban">
       <div class="sured text-center">
-        <a href="php"><img src="../images/sured.png" width="800" height="150"></a>
+        <a href="php"><img src="../images/index/sured.png" width="800" height="150"></a>
       </div>
-    </div>
+      <div class="tagu">
+        <img src="../images/index/taguitiran.png">
+      </div>
+  </div>
 </div>
 
 </body>
