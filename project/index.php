@@ -19,13 +19,14 @@
         </div>
       </from>  
 </div>
+<!--スレッド　設定　-->
 <div calss="container-fluid">
   <div class="row">
     <div class="keijiban">
-      <div class="sured mx-auto">
+      <div class="sured1 mx-auto">
         <a href="php"><img src="../images/index/sured.png" width="800" height="150"></a>
       </div>
-      <div class="tagu mx-auto">
+      <div class="tagu1 mx-auto">
         <img src="../images/index/taguitiran.png" width="800" height="30">
       </div>
   </div>
