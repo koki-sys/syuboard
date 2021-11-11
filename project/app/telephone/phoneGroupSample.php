@@ -1,6 +1,6 @@
-<?php require './header.php'; ?>
+<?php require '../../header.php'; ?>
 <div class="container">
-    <h1 style="color: #389B72;">通話中</h1>
+    <h1 class="heading">グループ通話サンプル</h1>
     <p class="note">
         Change Room mode (before join in a room):
         <a href="#">mesh</a> / <a href="#sfu">sfu</a>
