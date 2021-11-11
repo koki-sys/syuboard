@@ -13,16 +13,35 @@ nav {
 h2{
   color:#389B72;
   position: absolute;
-  left: 80px;
   top: 20; left: 80px;
 }
 
-.sured img{
+.sured1 img{
   position: absolute;
-  top: 150px; left: 300px;
+  top: 150px; left: 250px;
 }
 
-.tagu img{
+.tagu1 img{
   position: absolute;
-  top: 270px; left: 300px;
+  top: 270px; left: 250px;
+}
+
+.sured2 img{
+  position: absolute;
+  top: 330px; left: 250px;
+}
+
+.tagu2 img{
+  position: absolute;
+  top: 450px; left: 250px;
+}
+
+.sured3 img{
+  position: absolute;
+  top: 510px; left: 250px;
+}
+
+.tagu3 img{
+  position: absolute;
+  top: 630px; left: 250px;
 }
