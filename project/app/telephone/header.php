@@ -20,7 +20,7 @@
         </ul>
         <ul class="navbar-nav list-group list-group-horizontal">
             <li class="nav-item mr-2 ml-3">
-                <span class="mb-0 h6 light-green-text align-middle" id="call-time-up">通話時間</span>
+                <span class="mb-0 h6 light-green-text align-middle" id="call-time-up"></span>
             </li>
             <li class="nav-item mr-2 ml-3">
                 <img src="../../images/header/chat.svg" />

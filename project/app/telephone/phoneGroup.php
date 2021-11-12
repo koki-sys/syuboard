@@ -34,6 +34,5 @@
         </div>
         <p class="meta" id="js-meta"></p>
     </div>
-    <script src="./phoneGroupSample.js"></script>
-    <script src="./time.js"></script>
+    <script src="./phoneGroup.js"></script>
 <?php require './footer.php'; ?>
