@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../css/header.css" />
     <link rel="stylesheet" href="../../css/body.css" />
+    <script src="//cdn.webrtc.ecl.ntt.com/skyway-4.4.2.js"></script>
     <script src="./dropmenu.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>syuboard</title>
