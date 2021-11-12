@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="col-sm-6 col-md-4">
-            <div class="remote-streams" id="js-remote-streams" autoplay></div>
+            <div class="remote-streams" id="js-remote-streams"></div>
         </div>
         <div class="row">
             <span id="js-room-mode"></span>:

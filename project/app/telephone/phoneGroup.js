@@ -22,7 +22,7 @@ const Peer = window.Peer;
     const localStream = await navigator.mediaDevices
         .getUserMedia({
             audio: true,
-            video: { width: 1280, height: 720 }
+            video: true,
         })
         .catch(console.error);
 
