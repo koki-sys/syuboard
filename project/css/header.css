@@ -1,0 +1,63 @@
+.call-nav {
+    background-color: #389b72;
+}
+
+.light-green-text {
+    color: #def4c6;
+}
+
+.dropdown {
+    margin: 0 0 0 auto;
+    position: relative;
+}
+
+.dropdown__btn {
+    display: block;
+    padding: 0.2em;
+    background: none;
+    border: 0;
+}
+
+.dropdown__body {
+    width: 150px;
+    background: #fff;
+    box-shadow: 0 2px 6px 2px rgba(60, 64, 67, 0.149),
+        0 1px 2px 0 rgba(60, 64, 67, 0.302);
+    border-radius: 4px;
+    overflow: hidden;
+    position: absolute; /* メニュー部分は絶対配置させます */
+    top: 3rem;
+    right: 0px;
+}
+
+.dropdown__list {
+    /* デフォルトスタイル リセット */
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown__item {
+    display: block;
+}
+
+.dropdown__item-link {
+    display: block;
+    padding: 1em 1.2em;
+    font-size: 0.95em;
+    text-decoration: none;
+    color: #404040;
+}
+
+.dropdown__item-link:hover {
+    background: #f0f0f0;
+}
+
+.dropdown__body {
+    background-color: #fcfcfc;
+    display: none;
+}
+
+.dropdown__btn.is-open + .dropdown__body {
+    display: block;
+    z-index: 4;
+}

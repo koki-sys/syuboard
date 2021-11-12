@@ -1,6 +1,6 @@
-<?php require './header.php'; ?>
+<?php require '../../header.php'; ?>
 <div class="container">
-    <h1 style="color: #389B72;">通話中</h1>
+    <h1 class="heading">グループ通話サンプル</h1>
     <p class="note">
         Change Room mode (before join in a room):
         <a href="#">mesh</a> / <a href="#sfu">sfu</a>
@@ -34,5 +34,9 @@
         </div>
         <p class="meta" id="js-meta"></p>
     </div>
-    <script src="./phoneGroup.js"></script>
-<?php require './footer.php'; ?>
+    <script src="//cdn.webrtc.ecl.ntt.com/skyway-4.4.2.js"></script>
+    <script src="./phoneGroupSample.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+
+    </html>
