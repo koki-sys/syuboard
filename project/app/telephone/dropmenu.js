@@ -1,5 +1,4 @@
 (() => {
-    console.log("うごいてるよ！");
     document.addEventListener("DOMContentLoaded", function () {
         // HTML解析が終わったら
         const btn = document.getElementById("dropdown__btn"); // ボタンをidで取得
@@ -11,8 +10,6 @@
                 this.classList.toggle("is-open"); // is-openを付加する
                 body.animate([{ opacity: "0" }, { opacity: "1" }], 150);
             });
-        } else {
-            console.log("ぼたんないよ！");
         }
     });
 })();
