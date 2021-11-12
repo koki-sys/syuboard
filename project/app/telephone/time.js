@@ -4,8 +4,6 @@ let startTime;
 //startボタンを押した時にイベントが起動
 window.onload = () => {
     startTime = Date.now();
-    console.log(startTime);
-    console.log(new Date(startTime));
     countUp();
 };
 
