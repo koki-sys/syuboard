@@ -29,8 +29,7 @@
         </div>
         <div class="send-text">
             <input type="text" id="js-local-text" class="form-control p-0">
-            <small>Enterで送信</small>
-            <!--<button id="js-send-trigger" class="btn btn-primary">送信</button>-->
+            <small>Enterでメッセージ送信</small>
         </div>
     </div>
     <script src="./phoneGroup.js"></script>
