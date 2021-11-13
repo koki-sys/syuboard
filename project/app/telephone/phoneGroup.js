@@ -6,17 +6,8 @@ const Peer = window.Peer;
     const leaveTrigger = document.getElementById("js-leave-trigger");
     const remoteVideos = document.getElementById("js-remote-streams");
     const roomId = document.getElementById("js-room-id");
-    const roomMode = document.getElementById("js-room-mode");
     const localText = document.getElementById("js-local-text");
     const messages = document.getElementById("js-messages");
-
-    const getRoomModeByHash = () => (location.hash === "#sfu" ? "sfu" : "mesh");
-
-    roomMode.textContent = getRoomModeByHash();
-    window.addEventListener(
-        "hashchange",
-        () => (roomMode.textContent = getRoomModeByHash())
-    );
 
     const localStream = await navigator.mediaDevices
         .getUserMedia({
@@ -46,7 +37,7 @@ const Peer = window.Peer;
         }
 
         const room = peer.joinRoom(roomId.value, {
-            mode: getRoomModeByHash(),
+            mode: "mesh",
             stream: localStream,
         });
 
@@ -59,14 +50,29 @@ const Peer = window.Peer;
 
         // Render remote stream for new peer join in the room
         room.on("stream", async (stream) => {
-            // 多分ここ改造する！
+            // <div class="col-sm-6 col-md-4"></div>
+            // <div class="embed-responsive embed-responsive-16by9"></div>
+            const flagment = document.createDocumentFragment();
+
+            const colBox = document.createElement("div");
+            colBox.classList.add("col-sm-6");
+            colBox.classList.add("col-md-3");
+
+            const responsive = document.createElement("div");
+            responsive.classList.add("embed-responsive");
+            responsive.classList.add("embed-responsive-16by9");
+
             const newVideo = document.createElement("video");
             newVideo.srcObject = stream;
             newVideo.playsInline = true;
             // mark peerId to find it later at peerLeave event
             newVideo.setAttribute("data-peer-id", stream.peerId);
-            newVideo.setAttribute("width", 100);
-            remoteVideos.append(newVideo);
+
+            responsive.append(newVideo);
+            colBox.append(responsive);
+            flagment.append(colBox);
+            remoteVideos.append(flagment);
+
             await newVideo.play().catch(console.error);
         });
 
