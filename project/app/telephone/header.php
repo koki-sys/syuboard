@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg call-nav">
+    <nav class="navbar call-nav">
         <ul class="navbar-nav mr-auto">
             <span class="navbar-brand mb-0 h1 light-green-text">通話タイトル</span>
         </ul>
@@ -25,9 +25,7 @@
                 <span class="mb-0 h6 light-green-text align-middle" id="call-time-up"></span>
             </li>
             <li class="nav-item mr-2 ml-3">
-                <a href="#right-panel" id="chat">
-                    <img src="../../images/header/chat.svg" />
-                </a>
+                <img src="../../images/header/chat.svg" id="chat-btn"/>
             </li>
             <li class="nav-item mr-2 ml-3 dropdown">
                 <span class="m-0 light-green-text align-middle dropdown__btn" id="dropdown__btn">・・・</span>
