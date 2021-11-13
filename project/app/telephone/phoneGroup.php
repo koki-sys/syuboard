@@ -20,19 +20,18 @@
             <button id="js-join-trigger" class="btn btn-success">部屋に参加</button>
             <button id="js-leave-trigger" class="btn btn-danger">退出する</button>
         </div>
-
     </div>
-    <div id="right-panel" class="row">
+    <div id="chatbar" class="row chatbar">
         <div class="col-12">
             <div class="bg-secondary rounded">
                 <pre class="messages text-white" id="js-messages"></pre>
             </div>
         </div>
-        <div class="col-12">
-            <input type="text" id="js-local-text">
-            <button id="js-send-trigger" class="btn btn-primary">送信</button>
+        <div class="send-text">
+            <input type="text" id="js-local-text" class="form-control p-0">
+            <small>Enterでメッセージ送信</small>
         </div>
     </div>
-
     <script src="./phoneGroup.js"></script>
+    <script src="./chatbar.js"></script>
     <?php require './footer.php'; ?>
