@@ -50,17 +50,17 @@ const Peer = window.Peer;
 
         // Render remote stream for new peer join in the room
         room.on("stream", async (stream) => {
-            // <div class="col-sm-6 col-md-4"></div>
-            // <div class="embed-responsive embed-responsive-16by9"></div>
             const flagment = document.createDocumentFragment();
 
             const colBox = document.createElement("div");
             colBox.classList.add("col-sm-6");
             colBox.classList.add("col-md-3");
+            colBox.setAttribute("id", `col-${stream.peerId}`);
 
             const responsive = document.createElement("div");
             responsive.classList.add("embed-responsive");
             responsive.classList.add("embed-responsive-16by9");
+            responsive.setAttribute("id", `resp-${stream.peerId}`);
 
             const newVideo = document.createElement("video");
             newVideo.srcObject = stream;
@@ -88,6 +88,10 @@ const Peer = window.Peer;
             );
             remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
             remoteVideo.srcObject = null;
+
+            // ここに削除処理を入れる。
+            document.getElementById(`col-${peerId}`).remove();
+            document.getElementById(`resp-${peerId}`).remove();
             remoteVideo.remove();
 
             messages.textContent += `=== ${peerId} left ===\n`;
