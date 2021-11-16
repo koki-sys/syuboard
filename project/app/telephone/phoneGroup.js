@@ -89,7 +89,6 @@ const Peer = window.Peer;
             remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
             remoteVideo.srcObject = null;
 
-            // ここに削除処理を入れる。
             document.getElementById(`col-${peerId}`).remove();
             document.getElementById(`resp-${peerId}`).remove();
             remoteVideo.remove();
