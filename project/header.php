@@ -18,13 +18,13 @@
             </a>
         </ul>
         <ul class="navbar-nav list-group list-group-horizontal">
-            <li class="nav-item mr-2 ml-2">
+            <li class="nav-item mr-2 ml-3">
                 <a href="login.php" class="text-center" style="color: #DEF4C6; font-size: xx-small">
                     <img src="./images/header/login.png" class="d-block mx-auto" width="25" height="auto" />
                     <p style="color: #DEF4C6; font-size: xx-small" class="text-center m-0">ログイン</p>
                 </a>
             </li>
-            <li class="nav-item mr-2 ml-2">
+            <li class="nav-item mr-2 ml-3">
                 <a href="shinki.php">
                     <img src="./images/header/register.png" class="d-block mx-auto" width="25" height="auto" />
                     <p style="color: #B1CF5F; font-size: xx-small" class="text-center m-0">新規登録</p>
