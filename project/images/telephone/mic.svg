@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--?xml version="1.0" encoding="utf-8"?-->
 
-<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 
 <svg
    version="1.1"
    id="_x32_"
    x="0px"
    y="0px"
-   width="30"
-   height="30"
    viewBox="0 0 30 30"
    style="opacity:1"
    xml:space="preserve"
-   sodipodi:docname="camera.svg"
+   sodipodi:docname="mic.svg"
+   width="30"
+   height="30"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   inkscape:export-filename="C:\xampp\htdocs\syuboard\project\images\telephone\camera.png"
+   inkscape:export-filename="C:\xampp\htdocs\syuboard\project\images\telephone\mic.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -31,10 +31,10 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    showgrid="false"
-   width="30px"
-   inkscape:zoom="11.313709"
-   inkscape:cx="21.036426"
-   inkscape:cy="23.643882"
+   width="50px"
+   inkscape:zoom="17.721864"
+   inkscape:cx="14.558288"
+   inkscape:cy="12.272976"
    inkscape:window-width="1920"
    inkscape:window-height="991"
    inkscape:window-x="-9"
@@ -44,21 +44,19 @@
 <style
    type="text/css"
    id="style2">
-
 	.st0{fill:#4B4B4B;}
-
 </style>
 <g
    id="g8"
-   transform="matrix(0.05799175,0,0,0.05799175,0.1553301,0.24084205)">
+   transform="matrix(0.05813034,0,0,0.05813034,0.03654423,0.11285495)">
 	<path
    class="st0"
-   d="M 284.719,129.453 H 25.344 C 11.344,129.453 0,140.781 0,154.781 v 202.422 c 0,14 11.344,25.344 25.344,25.344 h 259.375 c 14,0 25.344,-11.344 25.344,-25.344 V 154.781 c 0,-14 -11.344,-25.328 -25.344,-25.328 z"
+   d="m 383.788,206.98 v 51.113 c -0.013,35.266 -14.301,67.108 -37.475,90.318 -23.212,23.176 -55.042,37.464 -90.307,37.464 -35.267,0 -67.108,-14.288 -90.32,-37.464 C 142.512,325.2 128.224,293.359 128.212,258.093 V 206.98 H 90.503 v 51.113 c 0.036,84.93 64.21,154.935 146.649,164.337 V 512 h 37.709 V 422.43 C 357.287,413.028 421.46,343.023 421.497,258.093 V 206.98 Z"
    style="fill:#389b72"
    id="path4" />
 	<path
    class="st0"
-   d="m 502.313,174.547 c -6.125,-4.797 -14.094,-6.516 -21.656,-4.688 L 357,199.984 c -11.375,2.766 -19.359,12.938 -19.359,24.641 v 60 c 0,11.688 7.984,21.859 19.359,24.625 l 123.656,30.141 c 7.563,1.813 15.531,0.094 21.656,-4.703 6.109,-4.813 9.688,-12.156 9.688,-19.922 V 194.484 c 0,-7.781 -3.578,-15.125 -9.687,-19.937 z"
+   d="m 256.006,344.41 c 47.589,0 86.305,-38.728 86.305,-86.318 V 86.318 C 342.311,38.728 303.596,0 256.006,0 208.416,0 169.688,38.728 169.688,86.318 v 171.775 c 0,47.589 38.728,86.317 86.318,86.317 z"
    style="fill:#389b72"
    id="path6" />
 </g>

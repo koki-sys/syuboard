@@ -26,14 +26,14 @@
         </div>
     </div>
     <footer class="fixed-bottom mb-4">
-        <div class="bg-dark row">
+        <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-12 col-md-4">
-                <div class="mx-auto dock">
-                    <img src="../../images/telephone/camera.png" />
-                    <img src="../../images/telephone/mic.png" />
-                    <img src="../../images/telephone/share.png" />
-                    <small>きるよ</small>
+            <div class="col-12 col-md-4 text-center">
+                <div class="d-inline-block mx-auto dock rounded">
+                    <img src="../../images/telephone/camera.png" class="pt-2 pb-2 pr-3 pl-3 rounded-left" />
+                    <img src="../../images/telephone/mic.png" class="pt-2 pb-2 pr-3 pl-3" />
+                    <img src="../../images/telephone/share.png" class="pt-2 pb-2 pr-3 pl-3" />
+                    <img src="../../images/telephone/callout.png" class="pt-2 pb-2 pr-3 pl-3 bg-danger rounded-right" />                    
                 </div>
             </div>
             <div class="col-md-4"></div>
@@ -41,4 +41,4 @@
     </footer>
     <script src="./phoneGroup.js"></script>
     <script src="./chatbar.js"></script>
-    <?php require './footer.php'; ?>
+<?php require './footer.php'; ?>
