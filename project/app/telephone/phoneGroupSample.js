@@ -6,13 +6,30 @@ const Peer = window.Peer;
     const leaveTrigger = document.getElementById("js-leave-trigger");
     const remoteVideos = document.getElementById("js-remote-streams");
     const roomId = document.getElementById("js-room-id");
+    const roomMode = document.getElementById("js-room-mode");
     const localText = document.getElementById("js-local-text");
+    const sendTrigger = document.getElementById("js-send-trigger");
     const messages = document.getElementById("js-messages");
+    const meta = document.getElementById("js-meta");
+    const sdkSrc = document.querySelector("script[src*=skyway]");
+
+    meta.innerText = `
+    UA: ${navigator.userAgent}
+    SDK: ${sdkSrc ? sdkSrc.src : "unknown"}
+    `.trim();
+
+    const getRoomModeByHash = () => (location.hash === "#sfu" ? "sfu" : "mesh");
+
+    roomMode.textContent = getRoomModeByHash();
+    window.addEventListener(
+        "hashchange",
+        () => (roomMode.textContent = getRoomModeByHash())
+    );
 
     const localStream = await navigator.mediaDevices
         .getUserMedia({
             audio: true,
-            video: true,
+            video: { width: 1280, height: 720 }
         })
         .catch(console.error);
 
@@ -37,7 +54,7 @@ const Peer = window.Peer;
         }
 
         const room = peer.joinRoom(roomId.value, {
-            mode: "mesh",
+            mode: getRoomModeByHash(),
             stream: localStream,
         });
 
@@ -50,29 +67,14 @@ const Peer = window.Peer;
 
         // Render remote stream for new peer join in the room
         room.on("stream", async (stream) => {
-            const flagment = document.createDocumentFragment();
-
-            const colBox = document.createElement("div");
-            colBox.classList.add("col-sm-6");
-            colBox.classList.add("col-md-3");
-            colBox.setAttribute("id", `col-${stream.peerId}`);
-
-            const responsive = document.createElement("div");
-            responsive.classList.add("embed-responsive");
-            responsive.classList.add("embed-responsive-16by9");
-            responsive.setAttribute("id", `resp-${stream.peerId}`);
-
+            // 多分ここ改造する！
             const newVideo = document.createElement("video");
             newVideo.srcObject = stream;
             newVideo.playsInline = true;
             // mark peerId to find it later at peerLeave event
             newVideo.setAttribute("data-peer-id", stream.peerId);
-
-            responsive.append(newVideo);
-            colBox.append(responsive);
-            flagment.append(colBox);
-            remoteVideos.append(flagment);
-
+            newVideo.setAttribute("width", 100);
+            remoteVideos.append(newVideo);
             await newVideo.play().catch(console.error);
         });
 
@@ -88,9 +90,6 @@ const Peer = window.Peer;
             );
             remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
             remoteVideo.srcObject = null;
-
-            document.getElementById(`col-${peerId}`).remove();
-            document.getElementById(`resp-${peerId}`).remove();
             remoteVideo.remove();
 
             messages.textContent += `=== ${peerId} left ===\n`;
@@ -98,7 +97,7 @@ const Peer = window.Peer;
 
         // for closing myself
         room.once("close", () => {
-            localText.removeEventListener("keypress", onClickSend);
+            sendTrigger.removeEventListener("click", onClickSend);
             messages.textContent += "== You left ===\n";
             Array.from(remoteVideos.children).forEach((remoteVideo) => {
                 remoteVideo.srcObject
@@ -109,19 +108,17 @@ const Peer = window.Peer;
             });
         });
 
-        localText.addEventListener("keypress", onClickSend);
+        sendTrigger.addEventListener("click", onClickSend);
         leaveTrigger.addEventListener("click", () => room.close(), {
             once: true,
         });
 
-        function onClickSend(e) {
-            if (e.key === "Enter") {
-                // Send message to all of the peers in the room via websocket
-                room.send(localText.value);
+        function onClickSend() {
+            // Send message to all of the peers in the room via websocket
+            room.send(localText.value);
 
-                messages.textContent += `${peer.id}: ${localText.value}\n`;
-                localText.value = "";
-            }
+            messages.textContent += `${peer.id}: ${localText.value}\n`;
+            localText.value = "";
         }
     });
 
