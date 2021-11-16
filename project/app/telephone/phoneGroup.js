@@ -8,6 +8,9 @@ const Peer = window.Peer;
     const roomId = document.getElementById("js-room-id");
     const localText = document.getElementById("js-local-text");
     const messages = document.getElementById("js-messages");
+    const camera = document.getElementById("camera");
+    const mic = document.getElementById("mic");
+    const share = document.getElementById("dispshare");
 
     const localStream = await navigator.mediaDevices
         .getUserMedia({
@@ -126,4 +129,27 @@ const Peer = window.Peer;
     });
 
     peer.on("error", console.error);
+
+    const switchCameraOnOff = () => {
+        const videoState = localStream.getVideoTracks()[0];
+        if(videoState.enabled){
+            videoState.enabled = false;
+        } else {
+            videoState.enabled = true;
+        }
+        console.log(videoState.enabled)
+    }
+
+    const switchMicOnOff = () => {
+        const micState = localStream.getAudioTracks()[0];
+        if(micState.enabled){
+            micState.enabled = false;
+        } else {
+            micState.enabled = true;
+        }
+        console.log(micState.enabled)
+    }
+
+    camera.addEventListener("click", switchCameraOnOff);
+    mic.addEventListener("click", switchMicOnOff);
 })();
