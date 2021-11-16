@@ -2,8 +2,18 @@ nav {
     background-color: #1c7c54;
   }
 
-h3{
+h2{
     color:#389B72;
     position: absolute;
-    top: 30; left: 80px;
+    top: 100; left: 120px;
   }
+
+.profile img{
+  position: absolute;
+  top: 160; left: 150px;
+}
+
+h3{
+  position: absolute;
+  top: 340; left: 220px;
+}

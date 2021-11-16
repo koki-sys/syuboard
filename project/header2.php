@@ -12,7 +12,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto ml-4">
             <a class="logo d-block" href="./index.php">
                 <img src="./images/header/syuboard.png" alt="logo" width="200" height="auto">
             </a>

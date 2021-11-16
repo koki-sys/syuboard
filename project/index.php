@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>SYUBOARDホーム画面</title>
-<link rel="stylesheet" href="../css/index.css" type="text/css">
+<link rel="stylesheet" href="./css/index.css" type="text/css">
 </head>
 <?php require './header.php'; ?>
 <body>
@@ -13,7 +13,7 @@
             <h2>掲示板</h2>
           </div>
           <div class="form-group col">
-            <input type="text" style="position: absolute; top: 30; right: 75px;" size="35" placeholder="ジャンル名で検索">
+            <input type="text" style="position: absolute; top: 30; right: 75px;" placeholder="ジャンル名で検索">
           </div>
         </div>
       </from>  
@@ -26,8 +26,7 @@
         <div class="sured1">
           <a href="php"><img src="./images/index/sured.png" width="800" height="120"></a>
           <div class="henshu1">
-
-                  <img src="./images/index/･･･.png">
+            <img src="./images/index/･･･.png">
           </div>
           <div class="prof1">
             <img src="./images/index/prof img.png" width="30" height="30">
