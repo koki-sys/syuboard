@@ -25,6 +25,20 @@
             <small>Enterでメッセージ送信</small>
         </div>
     </div>
+    <footer class="fixed-bottom mb-4">
+        <div class="bg-dark row">
+            <div class="col-md-4"></div>
+            <div class="col-12 col-md-4">
+                <div class="mx-auto dock">
+                    <img src="../../images/telephone/camera.png" />
+                    <img src="../../images/telephone/mic.png" />
+                    <img src="../../images/telephone/share.png" />
+                    <small>きるよ</small>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </footer>
     <script src="./phoneGroup.js"></script>
     <script src="./chatbar.js"></script>
     <?php require './footer.php'; ?>
