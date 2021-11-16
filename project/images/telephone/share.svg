@@ -8,14 +8,14 @@
    id="_x32_"
    x="0px"
    y="0px"
-   viewBox="0 0 310 250"
+   viewBox="0 0 30 30"
    style="opacity:1"
    xml:space="preserve"
    sodipodi:docname="share.svg"
-   width="310"
-   height="250"
+   width="30"
+   height="30"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   inkscape:export-filename="D:\Downloads\share.png"
+   inkscape:export-filename="C:\xampp\htdocs\syuboard\project\images\telephone\share.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -31,15 +31,16 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    showgrid="false"
-   inkscape:zoom="1"
-   inkscape:cx="103"
-   inkscape:cy="185.5"
+   inkscape:zoom="11.313708"
+   inkscape:cx="23.511302"
+   inkscape:cy="26.5607"
    inkscape:window-width="1920"
    inkscape:window-height="991"
    inkscape:window-x="-9"
    inkscape:window-y="-9"
    inkscape:window-maximized="1"
-   inkscape:current-layer="g935" />
+   inkscape:current-layer="g935"
+   width="30px" />
 <style
    type="text/css"
    id="style2">
@@ -56,7 +57,7 @@
    id="g935"
    transform="translate(36,-64)"><g
      id="g10"
-     transform="matrix(0.1953125,0,0,0.19588332,68.625,118.59987)">
+     transform="matrix(0.0191735,0,0,0.01922953,-25.905465,72.607003)">
 	<path
    class="st0"
    d="m 409.6,0.746 c -56.553,0 -102.4,45.842 -102.4,102.395 0,56.553 45.847,102.405 102.4,102.405 56.553,0 102.4,-45.852 102.4,-102.405 C 512,46.588 466.153,0.746 409.6,0.746 Z"
@@ -74,7 +75,7 @@
    id="path8" />
 </g><g
      id="g916"
-     transform="matrix(0.58593521,0,0,0.56254916,-31.001,44.28363)">
+     transform="matrix(0.05752027,0,0,0.05522451,-35.685582,65.311504)">
 	<path
    class="st0"
    d="M 488.188,41.797 H 23.813 C 10.719,41.797 0,52.516 0,65.609 v 311.969 c 0,13.094 10.719,23.813 23.813,23.813 h 152.375 v 46.016 h -31.031 v 22.797 h 221.688 v -22.797 h -31.031 v -46.016 h 152.375 c 13.094,0 23.813,-10.719 23.813,-23.813 V 65.609 C 512,52.516 501.281,41.797 488.188,41.797 Z m -7.157,319.125 H 30.953 V 72.766 h 450.078 z"
