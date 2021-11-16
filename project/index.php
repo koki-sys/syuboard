@@ -26,11 +26,8 @@
         <div class="sured1">
           <a href="php"><img src="./images/index/sured.png" width="800" height="120"></a>
           <div class="henshu1">
-            <div aria-expnaded="false" aria-haspopup="menu" aria-label="もっと見る" role="button" tabindex="0">
-                <div dir="ltr" class="">
-                  <img src="./images/index/･･･.png" type="select" onclick="dorp1()">
-              </div>
-            </div>
+
+                  <img src="./images/index/･･･.png">
           </div>
           <div class="prof1">
             <img src="./images/index/prof img.png" width="30" height="30">
