@@ -1,3 +1,7 @@
 .dock {
+    z-index: 1;
+}
+
+.dock-body {
     background-color: #DEF4C6;
 }

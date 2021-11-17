@@ -25,11 +25,11 @@
             <small>Enterでメッセージ送信</small>
         </div>
     </div>
-    <footer class="fixed-bottom mb-4">
+    <footer class="fixed-bottom mb-4 dock">
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-12 col-md-4 text-center">
-                <div class="d-inline-block mx-auto dock rounded">
+                <div class="d-inline-block mx-auto dock-body rounded">
                     <img src="../../images/telephone/camera.png" class="pt-2 pb-2 pr-3 pl-3 rounded-left" id="camera"/>
                     <img src="../../images/telephone/mic.png" class="pt-2 pb-2 pr-3 pl-3" id="mic"/>
                     <img src="../../images/telephone/share.png" class="pt-2 pb-2 pr-3 pl-3" id="dispshare" />

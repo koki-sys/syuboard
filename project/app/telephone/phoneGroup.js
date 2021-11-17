@@ -141,7 +141,6 @@ const Peer = window.Peer;
             // ビデオオン
             camera.setAttribute("src", "../../images/telephone/camera.png");
         }
-        console.log(videoState.enabled)
     }
 
     const switchMicOnOff = () => {
@@ -153,7 +152,6 @@ const Peer = window.Peer;
             micState.enabled = true;
             mic.setAttribute("src", "../../images/telephone/mic.png");
         }
-        console.log(micState.enabled)
     }
 
     camera.addEventListener("click", switchCameraOnOff);
