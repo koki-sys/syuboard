@@ -134,8 +134,12 @@ const Peer = window.Peer;
         const videoState = localStream.getVideoTracks()[0];
         if(videoState.enabled){
             videoState.enabled = false;
+            // ビデオオフ
+            camera.setAttribute("src", "../../images/telephone/cameraoff.png");
         } else {
             videoState.enabled = true;
+            // ビデオオン
+            camera.setAttribute("src", "../../images/telephone/camera.png");
         }
         console.log(videoState.enabled)
     }
@@ -144,8 +148,10 @@ const Peer = window.Peer;
         const micState = localStream.getAudioTracks()[0];
         if(micState.enabled){
             micState.enabled = false;
+            mic.setAttribute("src", "../../images/telephone/micoff.png");
         } else {
             micState.enabled = true;
+            mic.setAttribute("src", "../../images/telephone/mic.png");
         }
         console.log(micState.enabled)
     }
