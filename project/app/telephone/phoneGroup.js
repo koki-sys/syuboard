@@ -8,6 +8,9 @@ const Peer = window.Peer;
     const roomId = document.getElementById("js-room-id");
     const localText = document.getElementById("js-local-text");
     const messages = document.getElementById("js-messages");
+    const camera = document.getElementById("camera");
+    const mic = document.getElementById("mic");
+    const share = document.getElementById("dispshare");
 
     const localStream = await navigator.mediaDevices
         .getUserMedia({
@@ -126,4 +129,31 @@ const Peer = window.Peer;
     });
 
     peer.on("error", console.error);
+
+    const switchCameraOnOff = () => {
+        const videoState = localStream.getVideoTracks()[0];
+        if(videoState.enabled){
+            videoState.enabled = false;
+            // ビデオオフ
+            camera.setAttribute("src", "../../images/telephone/cameraoff.png");
+        } else {
+            videoState.enabled = true;
+            // ビデオオン
+            camera.setAttribute("src", "../../images/telephone/camera.png");
+        }
+    }
+
+    const switchMicOnOff = () => {
+        const micState = localStream.getAudioTracks()[0];
+        if(micState.enabled){
+            micState.enabled = false;
+            mic.setAttribute("src", "../../images/telephone/micoff.png");
+        } else {
+            micState.enabled = true;
+            mic.setAttribute("src", "../../images/telephone/mic.png");
+        }
+    }
+
+    camera.addEventListener("click", switchCameraOnOff);
+    mic.addEventListener("click", switchMicOnOff);
 })();

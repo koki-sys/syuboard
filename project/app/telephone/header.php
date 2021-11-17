@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/header.css" />
     <link rel="stylesheet" href="../../css/body.css" />
     <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/teldock.css" />
     <script src="./dropmenu.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>syuboard</title>
