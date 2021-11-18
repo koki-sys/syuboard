@@ -81,7 +81,26 @@ const Peer = window.Peer;
 
         room.on("data", ({ data, src }) => {
             // Show a message sent to the room and who sent
-            messages.textContent += `${src}: ${data}\n`;
+            const myContent = document.createElement("div");
+            myContent.classList.add("float-right");
+            myContent.style.width = "70%";
+
+            const myMessage = document.createElement("div");
+            myMessage.classList.add("rounded");
+            myMessage.style.color = "#404040";
+            myMessage.style.backgroundColor = "#DEF4C6";
+            myMessage.style.padding = "1.7%";
+            myMessage.textContent += `${data}`;
+
+            const myName = document.createElement("small");
+            myName.textContent += `${src}さん`;
+
+            const br = document.createElement("br");
+
+            myContent.append(myName);
+            myContent.append(myMessage);
+            messages.append(myContent);
+            messages.append(br);
         });
 
         // for closing room members
@@ -118,12 +137,35 @@ const Peer = window.Peer;
         });
 
         function onClickSend(e) {
-            if (e.key === "Enter") {
+            if (e.key === "Enter" && localText.value != "") {
                 // Send message to all of the peers in the room via websocket
                 room.send(localText.value);
 
-                messages.textContent += `${peer.id}: ${localText.value}\n`;
+                const myContent = document.createElement("div");
+                myContent.classList.add("float-left");
+                myContent.style.width = "100%";
+
+                const myMessage = document.createElement("div");
+                myMessage.classList.add("rounded");
+                myMessage.style.color = "#FCFCFC";
+                myMessage.style.backgroundColor = "#389B72";
+                myMessage.style.padding = "1.7%";
+                myMessage.style.width = "70%";
+                myMessage.textContent += `${localText.value}`;
+
+                const myName = document.createElement("small");
+                myName.textContent += `${peer.id}さん`;
+
+                const br = document.createElement("br");
+
+                myContent.append(myName);
+                myContent.append(myMessage);
+                messages.append(myContent);
+                messages.append(br);
                 localText.value = "";
+            } else if (e.key === "Enter" && localText.value == "") {
+                const br = document.createElement("br");
+                messages.append(br);
             }
         }
     });
@@ -132,7 +174,7 @@ const Peer = window.Peer;
 
     const switchCameraOnOff = () => {
         const videoState = localStream.getVideoTracks()[0];
-        if(videoState.enabled){
+        if (videoState.enabled) {
             videoState.enabled = false;
             // ビデオオフ
             camera.setAttribute("src", "../../images/telephone/cameraoff.png");
@@ -141,18 +183,18 @@ const Peer = window.Peer;
             // ビデオオン
             camera.setAttribute("src", "../../images/telephone/camera.png");
         }
-    }
+    };
 
     const switchMicOnOff = () => {
         const micState = localStream.getAudioTracks()[0];
-        if(micState.enabled){
+        if (micState.enabled) {
             micState.enabled = false;
             mic.setAttribute("src", "../../images/telephone/micoff.png");
         } else {
             micState.enabled = true;
             mic.setAttribute("src", "../../images/telephone/mic.png");
         }
-    }
+    };
 
     camera.addEventListener("click", switchCameraOnOff);
     mic.addEventListener("click", switchMicOnOff);

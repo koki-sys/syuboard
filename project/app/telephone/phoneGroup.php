@@ -16,9 +16,7 @@
     </div>
     <div id="chatbar" class="row chatbar">
         <div class="col-12">
-            <div class="bg-secondary rounded">
-                <pre class="messages text-white" id="js-messages"></pre>
-            </div>
+            <div class="messages" id="js-messages"></div>
         </div>
         <div class="send-text">
             <input type="text" id="js-local-text" class="form-control p-0">
@@ -30,10 +28,10 @@
             <div class="col-md-4"></div>
             <div class="col-12 col-md-4 text-center">
                 <div class="d-inline-block mx-auto dock-body rounded">
-                    <img src="../../images/telephone/camera.png" class="pt-2 pb-2 pr-3 pl-3 rounded-left" id="camera"/>
-                    <img src="../../images/telephone/mic.png" class="pt-2 pb-2 pr-3 pl-3" id="mic"/>
+                    <img src="../../images/telephone/camera.png" class="pt-2 pb-2 pr-3 pl-3 rounded-left" id="camera" />
+                    <img src="../../images/telephone/mic.png" class="pt-2 pb-2 pr-3 pl-3" id="mic" />
                     <img src="../../images/telephone/share.png" class="pt-2 pb-2 pr-3 pl-3" id="dispshare" />
-                    <img src="../../images/telephone/callout.png" class="pt-2 pb-2 pr-3 pl-3 bg-danger rounded-right" />                    
+                    <img src="../../images/telephone/callout.png" class="pt-2 pb-2 pr-3 pl-3 bg-danger rounded-right" />
                 </div>
             </div>
             <div class="col-md-4"></div>
@@ -41,4 +39,4 @@
     </footer>
     <script src="./phoneGroup.js"></script>
     <script src="./chatbar.js"></script>
-<?php require './footer.php'; ?>
+    <?php require './footer.php'; ?>
