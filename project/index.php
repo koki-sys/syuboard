@@ -13,7 +13,7 @@
             <h2>掲示板</h2>
           </div>
           <div class="form-group col">
-            <input type="text" style="position: absolute; top: 30; right: 75px;" placeholder="ジャンル名で検索">
+            <input type="text" style="position: absolute; top: 30; right: 75px; width: 40%; height: 30px;" placeholder="ジャンル名で検索">
           </div>
         </div>
       </from>  
@@ -21,7 +21,8 @@
 <script src="../js/shiritori_game.js"></script>
 <div calss="container-fluid">
   <div class="row">
-    <div class="col-mx">
+    <div class="col-md-2"></div>
+    <div class="col-md-7">
       <div class="keijiban">
         <div class="sured1">
           <a href="php"><img src="./images/index/sured.png" width="800" height="120"></a>
@@ -63,7 +64,8 @@
         </div>
       </div>
     </div>
-    <div class="col-mx"></div>
+    </div>
+    <div class="col-md-3"></div>
   </div>
 </div>
 
