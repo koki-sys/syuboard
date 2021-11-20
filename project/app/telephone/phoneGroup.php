@@ -23,7 +23,6 @@
             <small>Enterでメッセージ送信</small>
         </div>
     </div>
-    <!-- メンバー -->
     <div id="member" class="row member">
         <div class="col-12">
             <ul class="list-group list-group-flush">
@@ -31,6 +30,11 @@
                 <li class="list-group-item">テスト2</li>
                 <li class="list-group-item">テスト3</li>
             </ul>
+        </div>
+    </div>
+    <div id="tagbar" class="row tagbar">
+        <div class="col-12">
+            タグ
         </div>
     </div>
     <footer class="fixed-bottom mb-4 dock">
@@ -50,4 +54,5 @@
     <script src="./phoneGroup.js"></script>
     <script src="./chatbar.js"></script>
     <script src="./member.js"></script>
+    <script src="./tagbar.js"></script>
     <?php require './footer.php'; ?>
