@@ -33,7 +33,7 @@
                 <div class="dropdown__body" id="dropdown__body">
                     <ul class="dropdown__list">
                         <li class="dropdown__item"><span class="dropdown__item-link" id="member-btn">参加者リスト</span></li>
-                        <li class="dropdown__item"><a href="https://www.yahoo.co.jp/" class="dropdown__item-link">タグ</a></li>
+                        <li class="dropdown__item"><span class="dropdown__item-link" id="tagbar-btn">タグ</span></li>
                         <li class="dropdown__item"><a href="https://www.yahoo.co.jp/" class="dropdown__item-link">オプション</a></li>
                     </ul>
                 </div>
