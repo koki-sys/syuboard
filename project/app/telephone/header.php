@@ -26,13 +26,13 @@
                 <span class="mb-0 h6 light-green-text align-middle" id="call-time-up"></span>
             </li>
             <li class="nav-item mr-2 ml-3">
-                <img src="../../images/header/chat.svg" id="chat-btn"/>
+                <img src="../../images/header/chat.svg" id="chat-btn" />
             </li>
             <li class="nav-item mr-2 ml-3 dropdown">
                 <span class="m-0 light-green-text align-middle dropdown__btn" id="dropdown__btn">・・・</span>
                 <div class="dropdown__body" id="dropdown__body">
                     <ul class="dropdown__list">
-                        <li class="dropdown__item"><a href="https://www.google.com/" class="dropdown__item-link">参加者リスト</a></li>
+                        <li class="dropdown__item"><span class="dropdown__item-link" id="member-btn">参加者リスト</span></li>
                         <li class="dropdown__item"><a href="https://www.yahoo.co.jp/" class="dropdown__item-link">タグ</a></li>
                         <li class="dropdown__item"><a href="https://www.yahoo.co.jp/" class="dropdown__item-link">オプション</a></li>
                     </ul>
