@@ -5,15 +5,15 @@ nav {
 h2{
     color:#389B72;
     position: absolute;
-    top: 100; left: 120px;
+    top: 100; left: 140px;
   }
 
 .profile img{
   position: absolute;
-  top: 160; left: 150px;
+  top: 110; left: 0px;
 }
 
-h3{
+h4{
   position: absolute;
-  top: 340; left: 220px;
+  top: 270; left: 20px;
 }
