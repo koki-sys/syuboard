@@ -13,84 +13,84 @@ nav {
 h2{
   color:#389B72;
   position: absolute;
-  top: 20; left: 80px;
+  top: 20; left: 110px;
 }
 
 .sured1 img{
   position: absolute;
-  top: 150px; left: 250px;
+  top: 90px; left: 50px;
 }
 
 .henshu1 img{
   position: absolute;
-  top:160; left: 1010px;
+  top:100; left: 850px;
 }
 
 .prof1 img{
   position: absolute;
-  top:160; left: 260px;
+  top:100; left: 60px;
 }
 
 .tagu1 img{
   position: absolute;
-  top: 270px; left: 250px;
+  top: 210px; left: 50px;
 }
 
 .tagu1 h4{
-  position: absolute;
-  top: 275px; left: 550px;
+  position: relative;
+  top: 215px; left: 350px;
   color: white;
 }
 
 .sured2 img{
   position: absolute;
-  top: 330px; left: 250px;
+  top: 270px; left: 50px;
 }
 
 .henshu2 img{
   position: absolute;
-  top: 340; left: 1010px;
+  top: 280px; left: 850px;
 }
 
 .prof2 img{
   position: absolute;
-  top: 340; left: 260px;
+  top: 280px; left: 60px;
 }
 
 .tagu2 img{
   position: absolute;
-  top: 450px; left: 250px;
+  top: 390px; left: 50px;
 }
 
 .tagu2 h4{
-  position: absolute;
-  top: 455px; left: 550px;
+  position: relative;
+  top: 360px; left: 350px;
   color: white;
 }
 
 .sured3 img{
   position: absolute;
-  top: 510px; left: 250px;
+  top: 450px; left: 50px;
 }
 
 .henshu3 img{
   position: absolute;
-  top:520; left: 1010px;
+  top:460; left: 850px;
 }
 
 .prof3 img{
   position: absolute;
-  top: 520; left: 260px;
+  top: 460; left: 60px;
 }
 
 .tagu3 img{
   position: absolute;
-  top: 630px; left: 250px;
+  top: 570px; left: 50px;
 }
 
 .tagu3 h4{
-  position: absolute;
-  top: 635px; left: 550px;
+  position: relative;
+  top: 505px; left: 350px;
   color: white;
 }
 
