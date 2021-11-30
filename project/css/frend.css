@@ -1,0 +1,31 @@
+nav {
+    background-color: #1c7c54;
+  }
+  
+  .logo img {
+    margin-left: 20px;
+  }
+  
+  .collapse navbar-collapse img {
+    margin-left: 500px;
+  }
+
+  h2{
+    position: absolute;
+    left: 50px;
+  }
+
+  .frend1 img{
+    position: relative;
+    top: 100px;
+  }
+
+  .frend2 img{
+    position: relative;
+    top: 140px;
+  }
+
+  .frend3 img{
+    position: relative;
+    top: 180px;
+  }

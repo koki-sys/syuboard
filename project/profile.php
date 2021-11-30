@@ -7,8 +7,8 @@
 </head>
 <?php require './header2.php'; ?>
 <body>
+<h2 style="position: absolute; top: 100px; left: 140px;">プロフィール</h2>
   <div class="container">
-    <h2>プロフィール</h2>
     <div class="raw">
       <div class="col-md-1"></div>
         <div class="col-md-5">
