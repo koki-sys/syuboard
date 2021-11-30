@@ -17,7 +17,7 @@
         <div class="frend1">
           <div class="row center">
             <div class="col-md-2 mt-3">
-              <img src="./images/index/frend.png" class="img-fluid" width="10" height="100">
+              <img src="./images/index/frend.png" class="img-fluid" width="100" height="100">
             </div>
             <div class="col-md-2 mt-3">
               <img src="./images/index/frend.png" class="img-fluid" width="100" height="100">
