@@ -31,6 +31,22 @@ const Peer = window.Peer;
         debug: 3,
     }));
 
+    const AutoLink = (str) => {
+        const regexp_url =
+            /((h?)(ttps?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+))/g; // ']))/;
+        const regexp_makeLink = function (all, url, h, href) {
+            return (
+                '<a href="h' +
+                href +
+                '" style="word-break: break-all; color: #65B3E3" target="_blank">' +
+                url +
+                "</a>"
+            );
+        };
+
+        return str.replace(regexp_url, regexp_makeLink);
+    };
+
     // Register join handler
     joinTrigger.addEventListener("click", () => {
         // Note that you need to ensure the peer has connected to signaling server
@@ -79,6 +95,7 @@ const Peer = window.Peer;
             await newVideo.play().catch(console.error);
         });
 
+        // 相手からのチャット処理
         room.on("data", ({ data, src }) => {
             // Show a message sent to the room and who sent
             const myContent = document.createElement("div");
@@ -90,7 +107,7 @@ const Peer = window.Peer;
             myMessage.style.color = "#404040";
             myMessage.style.backgroundColor = "#DEF4C6";
             myMessage.style.padding = "1.7%";
-            myMessage.textContent += `${data}`;
+            myMessage.innerHTML += `${AutoLink(data)}`;
 
             const myName = document.createElement("small");
             myName.textContent += `${src}さん`;
@@ -136,6 +153,7 @@ const Peer = window.Peer;
             once: true,
         });
 
+        // 自分が送った分
         function onClickSend(e) {
             if (e.key === "Enter" && localText.value != "") {
                 // Send message to all of the peers in the room via websocket
@@ -147,11 +165,19 @@ const Peer = window.Peer;
 
                 const myMessage = document.createElement("div");
                 myMessage.classList.add("rounded");
-                myMessage.style.color = "#FCFCFC";
-                myMessage.style.backgroundColor = "#389B72";
-                myMessage.style.padding = "1.7%";
-                myMessage.style.width = "70%";
-                myMessage.textContent += `${localText.value}`;
+                myMessage.style.position = "relative";
+                myMessage.style.display = "inline-block";
+                myMessage.style.margin = "1.5rem 0 1.5rem 15px";
+                myMessage.style.padding = "7px 10px";
+                myMessage.style.minWidth = "120px";
+                myMessage.style.maxWidth = "100%";
+                myMessage.style.color = "#404040";
+                myMessage.style.fontSize = "16px";
+                myMessage.style.background = "#FCFCFC";
+                myMessage.style.border = "solid 3px #389B72";
+                myMessage.style.boxSizing = "border-box";
+
+                myMessage.innerHTML += `${AutoLink(localText.value)}`;
 
                 const myName = document.createElement("small");
                 myName.textContent += `${peer.id}さん`;
