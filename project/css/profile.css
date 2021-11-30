@@ -1,0 +1,19 @@
+nav {
+  background-color: #1c7c54;
+}
+
+h2{
+  color:#389B72;
+  position: absolute;
+  top: 100px; left: 140px;
+}
+
+.profile img{
+position: absolute;
+top: 110px; left: 0px;
+}
+
+h4{
+position: absolute;
+top: 270px; left: 20px;
+}
