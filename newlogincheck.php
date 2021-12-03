@@ -1,18 +1,20 @@
 <?php
-        $dsn = '';
-        $user = '';
-        $password = '';
+
+    require './database/connect.php';
+    require 'loginkey.php';
+    use Connection;
 
         $pass = $_POST['password'];
-        $hash = password_hash($pass,PASSWORD_DEFAULT);
 
-        
-            $pdo = new PDO($dsn, $user, $password);
-            $sql = $pdo->prepare('insert into *テーブル values()');
+        $c_t = openssl_encrypt($pass, 'AES-128-ECB', $key);
+        $pdo = Connection\conn();
+
+            
+            $sql = $pdo->prepare('insert into customer values(\'\',?,?,?,\'\')');
             $sql->execute([
                 $_POST['nickname'],
                 $_POST['email'],
-                $hash
+                $c_t
             ]);
 
             
