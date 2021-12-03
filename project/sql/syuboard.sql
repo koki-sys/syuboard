@@ -57,9 +57,15 @@ CREATE TABLE board(
     boardid INT AUTO_INCREMENT,
     title VARCHAR(32),
     customerid INT NOT NULL,
-    content VARCHAR(100),
     mtagid INT NOT NULL,
     PRIMARY KEY(boardid),
     FOREIGN KEY(customerid) REFERENCES customer(customerid),
     FOREIGN KEY(mtagid) REFERENCES mtag(mtagid)
+);
+
+CREATE TABLE post(
+    postid INT AUTO_INCREMENT,
+    content VARCHAR(100) NOT NULL,
+    boardid INT NOT NULL,
+    FOREIGN KEY(boardid) REFERENCES board(boardid),
 );
