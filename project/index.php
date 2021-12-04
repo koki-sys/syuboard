@@ -6,6 +6,7 @@ use Controller\BoardController;
 
 $boards = new BoardController();
 ?>
+
 <body>
     <div class="container-fluid">
         <div class="row mt-4 ml-4">
@@ -32,7 +33,7 @@ $boards = new BoardController();
                                 <?= $board["title"]; ?>
                             </a>
                             <small class="float-right">・・・</small><br />
-                            <span class="mt-4 float-right">ニックネーム</span>
+                            <span class="mt-4 float-right"><?= $board["name"] ?></span>
                         </div>
                         <div class="card-footer tag" style="background-color: #389B72">タグの一覧表示</div>
                     </div>
