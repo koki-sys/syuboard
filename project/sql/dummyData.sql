@@ -30,7 +30,7 @@ values
         1,
         "testA",
         "testA@example.com",
-        "dhowrghghrfeifjo",
+        "dhowrghghrf",
         "#"
     ),
     (
@@ -44,7 +44,7 @@ values
         3,
         "testC",
         "testC@exmaple.com",
-        "sddkfjohreghglli",
+        "sddkfjohre",
         "#"
     );
 

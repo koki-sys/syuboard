@@ -13,13 +13,14 @@ DROP TABLE IF EXISTS stag;
 
 /* 削除用SQL ここまで */
 
---データベース作成
+/* データベース作成 */
 CREATE DATABASE syuboard DEFAULT CHARACTER SET utf8 collate utf8_general_ci;
 
 GRANT ALL ON syuboard.* TO 'staff' @'localhost' identified by 'password';
 
 USE syuboard;
 
+/* 削除用SQL ここまで */
 CREATE TABLE customer (
     customerid INT AUTO_INCREMENT,
     name VARCHAR(40) NOT NULL,
@@ -65,9 +66,16 @@ CREATE TABLE board(
     boardid INT AUTO_INCREMENT,
     title VARCHAR(32),
     customerid INT NOT NULL,
-    content VARCHAR(100),
     mtagid INT NOT NULL,
     PRIMARY KEY(boardid),
     FOREIGN KEY(customerid) REFERENCES customer(customerid),
     FOREIGN KEY(mtagid) REFERENCES mtag(mtagid)
+);
+
+CREATE TABLE post(
+    postid INT AUTO_INCREMENT,
+    content VARCHAR(100) NOT NULL,
+    boardid INT NOT NULL,
+    PRIMARY KEY(postid),
+    FOREIGN KEY(boardid) REFERENCES board(boardid)
 );
