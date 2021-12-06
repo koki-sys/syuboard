@@ -1,3 +1,10 @@
+h1{
+  color:#1C7C54;
+}
+.title{
+  text-align:left;
+  margin-left:-10%;
+}
 .center{
     text-align:center;
 }
@@ -18,14 +25,35 @@
     font-size     : 18pt;        
     text-align    : center;      
     cursor        : pointer;     
-    padding       : 12px 12px;   
+    padding       : 15px 15px;   
     background    : #1b512d !important;     
     color         : #ffffff !important;     
     line-height   : 1em;         
     opacity       : 0.9;         
-    transition    : .3s;         
+    transition    : .3s;      
+    width         :125px;
+    height        :50px;
   }
   .btn1:hover {
+    opacity       : 1;           
+  }
+  .bc {
+    display       : inline-block;
+    border-radius : 5%;          
+    font-size     : 18pt;        
+    text-align    : center;      
+    cursor        : pointer;     
+    padding       : 12px 12px;   
+    color         : #1b512d !important; 
+    border        : solid !important;
+    border-color  : #1b512d !important;    
+    line-height   : 1em;         
+    opacity       : 0.9;         
+    transition    : .3s;
+    width         :125px;
+    height        :50px;         
+  }
+  .bc:hover {
     opacity       : 1;           
   }
   .btns{
@@ -33,7 +61,17 @@
     justify-content:space-around;
   }
   .left{
-    text-align : left;
+    text-align : left !important;
+  }
+  .leftp{
+    padding-left:20%;
+  }
+  .br{
+    margin-right:20%;
+  }
+  .right{
+    display: block;
+    margin: 0 0 0 auto;
   }
   .btn2 {
     display       : inline-block;
@@ -50,4 +88,91 @@
   }
   .btn2:hover {
     opacity       : 1;           
+  }
+  .element{
+    margin-top:10%;
+  }
+  
+  .cp_iptxt {
+    position: relative;
+    width: 80%;
+    margin: 40px 3%;
+  }
+  .cp_iptxt input[type='text'] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 20%;
+    letter-spacing: 1px;
+    padding-left: 4em;
+    border-radius: 8px;
+    border-color: #B1CF5F !important;
+  }
+  .cp_iptxt input[type='text']:focus {
+    outline: none;
+  }
+  .ef {
+    padding: 10px 14px;
+    transition: 0.4s;
+    border: 1px solid #1b2538;
+    background: transparent;
+  }
+  
+  .ef ~ label {
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    left: 14px;
+    width: 100%;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+    color: #aaaaaa;
+  }
+  .ef:focus ~ label,
+  .ct_iptxt.ef ~ label {
+    font-size: 12px;
+    top: -18px;
+    left: 0;
+    transition: 0.3s;
+    color: #da3c41;
+  }
+
+  .ct_iptxt {
+    position: relative;
+    width: 80%;
+    margin: 40px 3%;
+  }
+  .ct_iptxt input[type='text'] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    color: #aaaaaa;
+    border: none;
+    border-bottom: 2px solid #1b2538;
+    background: transparent;
+  }
+  .et input[type='text']:focus {
+    border-bottom: 2px solid #da3c41;
+    outline: none;
+  }
+
+  .sub input[type='text']{
+    border-radius: 8px;
+    width: 10%;
+  }
+  .purasu{
+    border-radius: 8px;
+    border-color: #ffffff !important;
+  }
+  
+  .pa30{
+    padding-left:30%;
+  }
+  .p20{
+    padding-left:20%;
+  }
+  .ma30{
+    margin-left:30%;
   }
