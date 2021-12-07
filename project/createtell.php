@@ -1,11 +1,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title></title>
-<<<<<<< Updated upstream
 <link rel="stylesheet" href="./css/style.css">
-=======
 <link rel="stylesheet" href="./css/create.css">
->>>>>>> Stashed changes
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -37,15 +34,27 @@ function add(){
     </label>
     </div>
 
-    <!--メインタグ　修正必須 
+ 
     <div class="p20">
     <div class="cp_iptxt">
-    <input class="ef" type="text" placeholder="" style="width:90%" required>
-    <label>タグ</label>
+    <label>メインタグ</label><br>
+    <select name="maintagu" style="width:80%">
+        <option value="sports">スポーツ</option>
+        <option value="hobby">ホビー</option>
+        <option value="game">ゲーム</option>
+        <option value="song/BGM">歌・BGM</option>
+        <option value="gambling">ギャンブル</option>
+        <option value="fashion">ファッション</option>
+        <option value="idol">アイドル</option>
+        <option value="animal">アニマル</option>
+        <option value="book">本</option>
+        <option value="movie">映画</option>
+        <option value="chat">雑談</option>
+        <option value="outdoors">アウトドア</option>
+    </select>
     <span class="focus_line"><i></i></span>
     </div>
     </div>
-    -->
     
     <div id="form_area" class="sub p20 ms-4">
     <input type="button" value="＋サブタグ"  onclick="add()" class="purasu">
