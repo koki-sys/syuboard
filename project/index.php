@@ -23,9 +23,9 @@ $boards = new BoardController();
         </div>
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-6 mt-3">
+            <div class="col-md-6 mt-3 " id="board-area">
                 <?php foreach ($boards->index() as $board) : ?>
-                    <div class="board card shadow-sm mt-3">
+                    <div class="board card shadow-sm mt-3" id="board<?= $board["mtagid"] ?>" style="z-index: 1;">
                         <div class="card-body">
                             <a href="#" class="float-left">
                                 <!-- AWSのS3から取得 -->
@@ -35,13 +35,26 @@ $boards = new BoardController();
                             <small class="float-right">・・・</small><br />
                             <span class="mt-4 float-right"><?= $board["name"] ?></span>
                         </div>
-                        <div class="card-footer tag" style="background-color: #389B72">タグの一覧表示</div>
+                        <div class="card-footer tag" id="tag" style="background-color: #389B72">
+                            タグの一覧表示
+                        </div>
+                        <!-- display tag index. -->
+                        <?php $tag = $boards->disp_tag($board["mtagid"])->fetch() ?>
+                        <div class="#" id="boardid">
+                            <?= $tag["mtagname"] ?>
+                            <?= $tag["stagname"] ?>
+                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
             <div class="col-md-2"></div>
         </div>
     </div>
+    <script type="text/javascript">
+        const dispBox = () => {
+            // tag click ivent
+        }
+    </script>
 </body>
 
 </html>
