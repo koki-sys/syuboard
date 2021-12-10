@@ -35,13 +35,13 @@ $boards = new BoardController();
                             <small class="float-right">・・・</small><br />
                             <span class="mt-4 float-right"><?= $board["name"] ?></span>
                         </div>
-                        <div class="card-footer tag" id="tag" style="background-color: #389B72">
+                        <div class="card-footer tag" id="tag" style="background-color: #389B72" onmouseover="dispBox(<?= $board['boardid'] ?>)" onmouseout="unDispBox(<?= $board['boardid'] ?>)">
                             タグの一覧表示
                         </div>
                         <!-- display tag index. -->
                         <?php $tag = $boards->disp_tag($board["mtagid"])->fetch() ?>
-                        <div class="#" id="boardid">
-                            <?= $tag["mtagname"] ?>
+                        <div class="d-none" id="<?= $board['boardid'] ?>">
+                            <strong><?= $tag["mtagname"] ?></strong><br>
                             <?= $tag["stagname"] ?>
                         </div>
                     </div>
@@ -51,8 +51,21 @@ $boards = new BoardController();
         </div>
     </div>
     <script type="text/javascript">
-        const dispBox = () => {
+        const dispBox = (id) => {
             // tag click ivent
+            console.log(id);
+            const boxElm = document.getElementById(id);
+
+            boxElm.classList.remove("d-none");
+            boxElm.classList.add("d-block");
+        }
+
+        const unDispBox = (id) => {
+            console.log(id);
+            const boxElm = document.getElementById(id);
+
+            boxElm.classList.remove("d-block");
+            boxElm.classList.add("d-none");
         }
     </script>
 </body>
