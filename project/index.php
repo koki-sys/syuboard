@@ -53,7 +53,6 @@ $boards = new BoardController();
     <script type="text/javascript">
         const dispBox = (id) => {
             // tag click ivent
-            console.log(id);
             const boxElm = document.getElementById(id);
 
             boxElm.classList.remove("d-none");
@@ -61,7 +60,6 @@ $boards = new BoardController();
         }
 
         const unDispBox = (id) => {
-            console.log(id);
             const boxElm = document.getElementById(id);
 
             boxElm.classList.remove("d-block");
