@@ -30,7 +30,11 @@ CREATE TABLE owner(
 
 CREATE TABLE stag(
     stagid INT AUTO_INCREMENT,
-    stagname VARCHAR(32) NOT NULL,
+    name1 VARCHAR(32),
+    name2 VARCHAR(32),
+    name3 VARCHAR(32),
+    name4 VARCHAR(32),
+    name5 VARCHAR(32),
     PRIMARY KEY(stagid)
 );
 
