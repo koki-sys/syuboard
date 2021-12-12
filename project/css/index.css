@@ -53,3 +53,20 @@ nav {
     top: 210px;
     left: 50px;
 }
+
+.board-tag {
+    width: 50%;
+    float: right;
+    z-index: 2;
+    position: absolute;
+    right: 1rem;
+}
+
+.board-user {
+    float: left;
+    color: #404040;
+}
+
+.board-user:hover {
+    text-decoration: none;
+}

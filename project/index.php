@@ -23,11 +23,11 @@ $boards = new BoardController();
         </div>
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-6 mt-3 " id="board-area">
+            <div class="col-md-6 mt-3" id="board-area">
                 <?php foreach ($boards->index() as $board) : ?>
-                    <div class="board card shadow-sm mt-3" id="board<?= $board["mtagid"] ?>" style="z-index: 1;">
+                    <div class="board card shadow-sm mt-3" id="board<?= $board["mtagid"] ?>" style="z-index: 1;position: relative">
                         <div class="card-body">
-                            <a href="#" class="float-left">
+                            <a href="#" class="board-user">
                                 <!-- AWSのS3から取得 -->
                                 <img src="./images/index/prof img.png" width="30" height="30">
                                 <?= $board["title"]; ?>
@@ -35,15 +35,15 @@ $boards = new BoardController();
                             <small class="float-right">・・・</small><br />
                             <span class="mt-4 float-right"><?= $board["name"] ?></span>
                         </div>
-                        <div class="card-footer tag" id="tag" style="background-color: #389B72" onmouseover="dispBox(<?= $board['boardid'] ?>)" onmouseout="unDispBox(<?= $board['boardid'] ?>)">
+                        <div class="card-footer tag" id="tag" onclick="dispBox(<?= $board['boardid'] ?>)">
                             タグの一覧表示
                         </div>
-                        <!-- display tag index. -->
-                        <?php $tag = $boards->disp_tag($board["mtagid"])->fetch() ?>
-                        <div class="d-none" id="<?= $board['boardid'] ?>">
-                            <strong><?= $tag["mtagname"] ?></strong><br>
-                            <?= $tag["stagname"] ?>
-                        </div>
+                    </div>
+                    <!-- display tag index. -->
+                    <?php $tag = $boards->disp_tag($board["mtagid"])->fetch() ?>
+                    <div class="d-none card board-tag" id="<?= $board['boardid'] ?>">
+                        <strong><?= $tag["mtagname"] ?></strong><br>
+                        <?= $tag["stagname"] ?>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -53,17 +53,13 @@ $boards = new BoardController();
     <script type="text/javascript">
         const dispBox = (id) => {
             // tag click ivent
-            const boxElm = document.getElementById(id);
+            const boxElmClass = document.getElementById(id).classList;
 
-            boxElm.classList.remove("d-none");
-            boxElm.classList.add("d-block");
-        }
-
-        const unDispBox = (id) => {
-            const boxElm = document.getElementById(id);
-
-            boxElm.classList.remove("d-block");
-            boxElm.classList.add("d-none");
+            if (boxElmClass.contains("d-none")) {
+                boxElmClass.remove("d-none");
+            } else {
+                boxElmClass.add("d-none");
+            }
         }
     </script>
 </body>
