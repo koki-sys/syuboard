@@ -1,96 +1,72 @@
 nav {
-  background-color: #1c7c54;
+    background-color: #1c7c54;
 }
 
 .logo img {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .collapse navbar-collapse img {
-  margin-left: 500px;
+    margin-left: 500px;
 }
 
-h2{
-  color:#389B72;
-  position: absolute;
-  top: 20; left: 110px;
+.page-title {
+    color: #389b72;
 }
 
-.sured1 img{
-  position: absolute;
-  top: 90px; left: 50px;
+.board {
+    background-color: #def4c6;
 }
 
-.henshu1 img{
-  position: absolute;
-  top:100; left: 850px;
+.tag {
+    background-color: #389b72;
+    text-align: center;
+    color: #fcfcfc;
 }
 
-.prof1 img{
-  position: absolute;
-  top:100; left: 60px;
+.tag:hover {
+    background-color: #215c43;
+    text-align: center;
+    color: #fcfcfc;
 }
 
-.tagu1 img{
-  position: absolute;
-  top: 210px; left: 50px;
+.sured1 img {
+    position: absolute;
+    top: 90px;
+    left: 50px;
 }
 
-.tagu1 h4{
-  position: relative;
-  top: 215px; left: 350px;
-  color: white;
+.henshu1 img {
+    position: absolute;
+    top: 100;
+    left: 850px;
 }
 
-.sured2 img{
-  position: absolute;
-  top: 270px; left: 50px;
+.prof1 img {
+    position: absolute;
+    top: 100;
+    left: 60px;
 }
 
-.henshu2 img{
-  position: absolute;
-  top: 280px; left: 850px;
+.tagu1 img {
+    position: absolute;
+    top: 210px;
+    left: 50px;
 }
 
-.prof2 img{
-  position: absolute;
-  top: 280px; left: 60px;
+.board-tag {
+    width: 50%;
+    float: right;
+    z-index: 2;
+    position: absolute;
+    right: 1rem;
 }
 
-.tagu2 img{
-  position: absolute;
-  top: 390px; left: 50px;
+.board-user {
+    float: left;
+    color: #404040;
 }
 
-.tagu2 h4{
-  position: relative;
-  top: 360px; left: 350px;
-  color: white;
+.board-user:hover {
+    text-decoration: none;
 }
-
-.sured3 img{
-  position: absolute;
-  top: 450px; left: 50px;
-}
-
-.henshu3 img{
-  position: absolute;
-  top:460; left: 850px;
-}
-
-.prof3 img{
-  position: absolute;
-  top: 460; left: 60px;
-}
-
-.tagu3 img{
-  position: absolute;
-  top: 570px; left: 50px;
-}
-
-.tagu3 h4{
-  position: relative;
-  top: 505px; left: 350px;
-  color: white;
-}
-

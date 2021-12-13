@@ -10,8 +10,8 @@ DROP TABLE IF EXISTS owner;
 DROP TABLE IF EXISTS customer;
 
 DROP TABLE IF EXISTS stag;
-/* 削除用SQL ここまで */
 
+/* 削除用SQL ここまで */
 CREATE TABLE customer (
     customerid INT AUTO_INCREMENT,
     name VARCHAR(40) NOT NULL,
@@ -30,7 +30,11 @@ CREATE TABLE owner(
 
 CREATE TABLE stag(
     stagid INT AUTO_INCREMENT,
-    stagname VARCHAR(32) NOT NULL,
+    name1 VARCHAR(32),
+    name2 VARCHAR(32),
+    name3 VARCHAR(32),
+    name4 VARCHAR(32),
+    name5 VARCHAR(32),
     PRIMARY KEY(stagid)
 );
 
@@ -57,9 +61,16 @@ CREATE TABLE board(
     boardid INT AUTO_INCREMENT,
     title VARCHAR(32),
     customerid INT NOT NULL,
-    content VARCHAR(100),
     mtagid INT NOT NULL,
     PRIMARY KEY(boardid),
     FOREIGN KEY(customerid) REFERENCES customer(customerid),
     FOREIGN KEY(mtagid) REFERENCES mtag(mtagid)
+);
+
+CREATE TABLE post(
+    postid INT AUTO_INCREMENT,
+    content VARCHAR(100) NOT NULL,
+    boardid INT NOT NULL,
+    PRIMARY KEY(postid),
+    FOREIGN KEY(boardid) REFERENCES board(boardid)
 );
