@@ -70,3 +70,19 @@ nav {
 .board-user:hover {
     text-decoration: none;
 }
+
+.main-tag {
+    background-color: #def4c6;
+    color: #404040;
+    border: 1px solid #b9b9b9;
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0.7em;
+}
+
+.sub-tag {
+    color: #404040;
+    border: 1px solid #b9b9b9;
+    padding: 0.5rem;
+    margin: 0.7em;
+}
