@@ -24,7 +24,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-6 mt-3">
                 <div class="board card shadow-sm mt-3">
-                    <div class="card-bod">
+                    <div class="card-body">
                         <a href="#" class="float-left">
                             <img src="./images/index/prof img.png" width="30" height="30">
                         </a>
