@@ -39,11 +39,10 @@ $boards = new BoardController();
                             タグの一覧表示
                         </div>
                     </div>
-                    <!-- display tag index. -->
                     <?php $tag = $boards->disp_tag($board["mtagid"])->fetch() ?>
-                    <div class="d-none card board-tag" id="<?= $board['boardid'] ?>">
-                        <strong><?= $tag["mtagname"] ?></strong><br>
-                        <?= $tag["stagname"] ?>
+                    <div class="d-none board-tag bg-white border p-2 pb-4" id="<?= $board['boardid'] ?>">
+                        <span class="rounded main-tag"><?= $tag["mtagname"] ?></span><br />
+                        <span class="rounded sub-tag"><?= $tag["stagname"] ?></span>
                     </div>
                 <?php endforeach; ?>
             </div>
