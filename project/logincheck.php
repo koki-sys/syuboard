@@ -35,8 +35,7 @@ unset($_SESSION['error']);
                     exit;
                 }else{
                 $_SESSION['error'] = 'error1';
-                $_SESSION['q'] = $db_pass;
-                $_SESSION['b'] = $c_t;
+                
                 header('Location: login.php');
                 }
 
