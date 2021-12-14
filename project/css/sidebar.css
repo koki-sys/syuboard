@@ -62,3 +62,13 @@
     width: 20%;
     height: 100%;
 }
+
+.drag-and-drop {
+    cursor: move;
+    position: absolute;
+    z-index: 1000;
+}
+
+.drag {
+    z-index: 1001;
+}

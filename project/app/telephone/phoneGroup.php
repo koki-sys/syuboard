@@ -1,5 +1,5 @@
 <?php require './header.php'; ?>
-<div class="container-fluid">
+<div class="container-fluid" cmanOMat="area">
     <h1 style="color: #389B72;">通話中</h1>
     <div class="row">
         部屋名:
@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    <div id="chatbar" class="row chatbar">
+    <div id="chatbar" class="row chatbar drag-and-drop" cmanOMat="movearea">
         <div class="col-12">
             <div class="messages" id="js-messages"></div>
         </div>
@@ -51,6 +51,7 @@
             <div class="col-md-4"></div>
         </div>
     </footer>
+    <script src="./moveWindow.js"></script>
     <script src="./phoneGroup.js"></script>
     <script src="./chatbar.js"></script>
     <script src="./member.js"></script>
