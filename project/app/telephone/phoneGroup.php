@@ -14,13 +14,22 @@
             </div>
         </div>
     </div>
-    <div id="chatbar" class="row chatbar drag-and-drop" cmanOMat="movearea">
-        <div class="col-12">
-            <div class="messages" id="js-messages"></div>
-        </div>
-        <div class="send-text">
-            <input type="text" id="js-local-text" class="form-control p-0">
-            <small>Enterでメッセージ送信</small>
+    <div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="chatModalLabel">チャット</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body messages" id="js-messages">
+                </div>
+                <div class="modal-footer">
+                    <input type="text" id="js-local-text" class="form-control p-0">
+                    <small>Enterでメッセージ送信</small>
+                </div>
+            </div>
         </div>
     </div>
     <div id="member" class="row member">
@@ -51,9 +60,12 @@
             <div class="col-md-4"></div>
         </div>
     </footer>
-    <script src="./moveWindow.js"></script>
+    <script>
+        $("#chatModal").draggable({
+            cursor: "move"
+        });
+    </script>
     <script src="./phoneGroup.js"></script>
-    <script src="./chatbar.js"></script>
     <script src="./member.js"></script>
     <script src="./tagbar.js"></script>
     <?php require './footer.php'; ?>

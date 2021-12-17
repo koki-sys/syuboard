@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <script src="//cdn.webrtc.ecl.ntt.com/skyway-4.4.2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/header.css" />
     <link rel="stylesheet" href="../../css/body.css" />
     <link rel="stylesheet" href="../../css/sidebar.css" />
@@ -26,7 +28,7 @@
                 <span class="mb-0 h6 light-green-text align-middle" id="call-time-up"></span>
             </li>
             <li class="nav-item mr-2 ml-3">
-                <img src="../../images/header/chat.svg" id="chat-btn" />
+                <img src="../../images/header/chat.svg" data-toggle="modal" data-target="#chatModal" />
             </li>
             <li class="nav-item mr-2 ml-3 dropdown">
                 <span class="m-0 light-green-text align-middle dropdown__btn" id="dropdown__btn">・・・</span>
