@@ -38,6 +38,7 @@ $boards = new BoardController();
                         <div class="card-footer tag" style="background-color: #389B72">タグの一覧表示</div>
                     </div>
                 <?php endforeach; ?>
+                <div class=" float-right"><img src="./images/index/Make thread.png" width="20" heifht="20"></div>
             </div>
             <div class="col-md-2"></div>
         </div>
