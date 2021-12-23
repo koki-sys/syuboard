@@ -34,6 +34,6 @@ class TalkController
         echo "Status code: $httpcode \n";
         $data = json_decode($response);
         echo "meeting: ", $data->{'meeting'}, "\n";
-        header("Location: ".$data->{'meeting'});
+        header("Location: {$data->{'meeting'}}");
     }
 }
