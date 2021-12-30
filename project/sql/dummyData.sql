@@ -50,7 +50,7 @@ values
 
 /* サブタグのテーブル */
 insert into
-    stag(stagid, stagname)
+    stag(stagid, name1)
 values
     (1, "OOキャンプ場");
 
