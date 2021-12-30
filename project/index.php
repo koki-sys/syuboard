@@ -1,10 +1,10 @@
-<?php require './header.php'; ?>
+<?php require './header.php' ?>
 <?php
-require './app/controller/BoardController.php';
-
+require_once('./app/controller/BoardController.php');
 use Controller\BoardController;
 
 $boards = new BoardController();
+$board = $boards->index();
 ?>
 
 <body>
@@ -24,26 +24,34 @@ $boards = new BoardController();
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-6 mt-3" id="board-area">
-                <?php foreach ($boards->index() as $board) : ?>
-                    <div class="board card shadow-sm mt-3" id="board<?= $board["mtagid"] ?>" style="z-index: 1;position: relative">
-                        <div class="card-body">
-                            <a href="#" class="board-user">
-                                <!-- AWSのS3から取得 -->
-                                <img src="./images/index/prof img.png" width="30" height="30">
-                                <?= $board["title"]; ?>
-                            </a>
-                            <small class="float-right">・・・</small><br />
-                            <span class="mt-4 float-right"><?= $board["name"] ?></span>
-                        </div>
-                        <div class="card-footer tag" id="tag" onclick="dispBox(<?= $board['boardid'] ?>)">
-                            タグの一覧表示
-                        </div>
+                <?php foreach ($board as $result) : ?>
+                <div class="board card shadow-sm mt-3"
+                    id="board<?= $result["mtagid"] ?>"
+                    style="z-index: 1;position: relative">
+                    <div class="card-body">
+                        <a href="#" class="board-user">
+                            <!-- AWSのS3から取得 -->
+                            <img src="./images/index/prof img.png" width="30" height="30">
+                            <?= $result["title"]; ?>
+                        </a>
+                        <small class="float-right">・・・</small><br />
+                        <span class="mt-4 float-right"><?= $result["name"] ?></span>
                     </div>
-                    <?php $tag = $boards->disp_tag($board["mtagid"])->fetch() ?>
-                    <div class="d-none board-tag bg-white border p-2 pb-4" id="<?= $board['boardid'] ?>">
-                        <span class="rounded main-tag"><?= $tag["mtagname"] ?></span><br />
-                        <span class="rounded sub-tag"><?= $tag["stagname"] ?></span>
+                    <div class="card-footer tag" id="tag"
+                        onclick="dispBox(<?= $result['boardid'] ?>)">
+                        タグの一覧表示
                     </div>
+                </div>
+                <?php $result["mtagid"] ?>
+                <div class="d-none board-tag bg-white border p-2 pb-4"
+                    id="<?= $result['boardid'] ?>">
+                    <span class="rounded main-tag"><?= $result["mtagname"] ?></span><br />
+                    <?php for ($count = 1; $count <= 5; $count++) : ?>
+                    <?php if (!is_null($result["name${count}"])) : ?>
+                    <span class="rounded sub-tag"><?= $result["name${count}"] ?></span>
+                    <?php endif; ?>
+                    <?php endfor; ?>
+                </div>
                 <?php endforeach; ?>
             </div>
             <div class="col-md-2"></div>
