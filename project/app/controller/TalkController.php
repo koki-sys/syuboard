@@ -1,6 +1,11 @@
 <?php
 namespace Controller;
 
+/**
+ * 通話に関するコントローラ（処理）
+ * 
+ * @author koki-sys
+ */
 class TalkController
 {
     /**
@@ -11,12 +16,10 @@ class TalkController
     public function meeting()
     {
         $API_KEY = "mirotalk_default_secret";
-        // $MIROTALK_URL = "http://localhost:3000/api/v1/meeting";
-        // $MIROTALK_URL = "https://mirotalk.herokuapp.com/api/v1/meeting";
-        $MIROTALK_URL = "https://syutalk.lolipop.io/api/v1/meeting";
+        $SYUTALK_URL = "https://syutalk.lolipop.io/api/v1/meeting";
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $MIROTALK_URL);
+        curl_setopt($ch, CURLOPT_URL, $SYUTALK_URL);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
 
@@ -27,7 +30,6 @@ class TalkController
 
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         $response = curl_exec($ch);
-        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         curl_close($ch);
 
