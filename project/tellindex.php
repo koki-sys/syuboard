@@ -22,13 +22,13 @@ $talk = $talks->index();
         </div>
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-6 mt-3" id="talk-area">
+            <div class="col-md-6 mt-3" id="board-area">
                 <?php foreach ($talk as $result) : ?>
-                <div class="talk card shadow-sm mt-3"
+                <div class="board card shadow-sm mt-3"
                     id="talk<?= $result["mtagid"] ?>"
                     style="z-index: 1;position: relative">
                     <div class="card-body">
-                        <a href="#" class="talk-user">
+                        <a href="#" class="board-user">
                             <!-- AWSのS3から取得 -->
                             <img src="./images/index/prof img.png" width="30" height="30">
                             <?= $result["title"]; ?>
@@ -37,13 +37,13 @@ $talk = $talks->index();
                         <span class="mt-4 float-right"><?= $result["name"] ?></span>
                     </div>
                     <div class="card-footer tag" id="tag"
-                        onclick="dispBox(<?= $result['talkid'] ?>)">
+                        onclick="dispBox(<?= $result['groupid'] ?>)">
                         タグの一覧表示
                     </div>
                 </div>
                 <?php $result["mtagid"] ?>
-                <div class="d-none talk-tag bg-white border p-2 pb-4"
-                    id="<?= $result['talkid'] ?>">
+                <div class="d-none board-tag bg-white border p-2 pb-4"
+                    id="<?= $result['groupid'] ?>">
                     <span class="rounded main-tag"><?= $result["mtagname"] ?></span><br />
                     <?php for ($count = 1; $count <= 5; $count++) : ?>
                     <?php if (!is_null($result["name${count}"])) : ?>
@@ -68,4 +68,4 @@ $talk = $talks->index();
             }
         }
     </script>
-    <?php require '../footer.php';
+    <?php require 'footer.php';?>

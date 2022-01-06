@@ -53,10 +53,13 @@ class TalkController
     public function index()
     {
         $pdo = conn();
-        $sql = "select * from telephone join customer "."on telephone.customerid = customer.customerid join mtag on mtag.mtagid = customer.mtagid";
+        $sql = "select * from telphone join customer ".
+        "on telphone.customerid = customer.customerid join mtag on mtag.mtagid = telphone.mtagid ".
+        "join stag on mtag.stagid = stag.stagid";
         $get_talk_query = $pdo->prepare($sql);
         $get_talk_query->execute();
         $talk_array = $get_talk_query->fetchAll();
+        var_dump($talk_array);
 
         return $talk_array;
     }
