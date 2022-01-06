@@ -1,9 +1,14 @@
 <?php
+
 namespace Controller;
+
+require_once('./database/connect.php');
+
+use function Connection\conn;
 
 /**
  * 通話に関するコントローラ（処理）
- * 
+ *
  * @author koki-sys
  */
 class TalkController
@@ -35,5 +40,24 @@ class TalkController
 
         $data = json_decode($response);
         header("Location: {$data->{'meeting'}}");
+    }
+
+    /**
+     * 通話スレッドを一覧表示するための
+     * メソッド
+     *
+     * @author koki-sys
+     *
+     * @return \PDOStatement
+     */
+    public function index()
+    {
+        $pdo = conn();
+        $sql = "select * from telephone join customer "."on telephone.customerid = customer.customerid join mtag on mtag.mtagid = customer.mtagid";
+        $get_talk_query = $pdo->prepare($sql);
+        $get_talk_query->execute();
+        $talk_array = $get_talk_query->fetchAll();
+
+        return $talk_array;
     }
 }
