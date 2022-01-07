@@ -11,15 +11,17 @@ $talk = $talks->index();
     <div class="container-fluid">
         <div class="row mt-4 ml-4">
             <div class="col-md-1"></div>
-            <div class="col-md-7">
+            <div class="col-md-5">
                 <h2 class="page-title">通話一覧</h2>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <form action="#" method="post">
                     <input type="text" class="form-control" placeholder="タグor部屋名で検索" />
                 </form>
+
             </div>
-            <div class="col-md-1"></div>
+            <div class="col-md-2 mt-2"><a class="submit-btn rounded" href="./createtell.php">通話を作成</a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-2"></div>
@@ -38,11 +40,13 @@ $talk = $talks->index();
                         </div>
                         <div class="row mt-3">
                             <div class="col-3">
-                                <div class="tell-main-tag"><img src="./images/index/maintag.png" width="25" class="mr-2"><?= $result["mtagname"] ?></div>
+                                <div class="tell-main-tag"><img src="./images/index/maintag.png" width="25"
+                                        class="mr-2"><?= $result["mtagname"] ?>
+                                </div>
                             </div>
                             <div class="col-4"><span>主：<?= $result["name"] ?></span>
                             </div>
-                            <div class="col-5"><a class="btn float-right tell-btn">通話開始</a>
+                            <div class="col-5"><a class="btn float-right submit-btn">通話開始</a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +67,11 @@ $talk = $talks->index();
                 </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="float-right mr-3">
+
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript">

@@ -59,8 +59,17 @@ class TalkController
         $get_talk_query = $pdo->prepare($sql);
         $get_talk_query->execute();
         $talk_array = $get_talk_query->fetchAll();
-        var_dump($talk_array);
+        // var_dump($talk_array);
 
         return $talk_array;
+    }
+
+    /**
+     * 通話スレッドを作成するメソッド
+     * 
+     * @author koki-sys
+     */
+    public function create() {
+        
     }
 }
