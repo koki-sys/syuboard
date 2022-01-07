@@ -6,6 +6,7 @@ use Controller\TalkController;
 $talks = new TalkController();
 $talk = $talks->index();
 ?>
+
 <body>
     <div class="container-fluid">
         <div class="row mt-4 ml-4">
@@ -28,13 +29,22 @@ $talk = $talks->index();
                     id="talk<?= $result["mtagid"] ?>"
                     style="z-index: 1;position: relative">
                     <div class="card-body">
-                        <a href="#" class="board-user">
-                            <!-- AWSのS3から取得 -->
-                            <img src="./images/index/prof img.png" width="30" height="30">
-                            <?= $result["title"]; ?>
-                        </a>
-                        <small class="float-right">・・・</small><br />
-                        <span class="mt-4 float-right"><?= $result["name"] ?></span>
+                        <div class="row">
+                            <p href="#" class="board-user">
+                                <!-- AWSのS3から取得 -->
+                                <img src="./images/index/prof img.png" width="30" height="30">
+                                <?= $result["title"]; ?>
+                            </p>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-3">
+                                <div class="tell-main-tag"><img src="./images/index/maintag.png" width="25" class="mr-2"><?= $result["mtagname"] ?></div>
+                            </div>
+                            <div class="col-4"><span>主：<?= $result["name"] ?></span>
+                            </div>
+                            <div class="col-5"><a class="btn float-right tell-btn">通話開始</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-footer tag" id="tag"
                         onclick="dispBox(<?= $result['groupid'] ?>)">
@@ -68,4 +78,4 @@ $talk = $talks->index();
             }
         }
     </script>
-    <?php require 'footer.php';?>
+    <?php require 'footer.php';
