@@ -25,7 +25,7 @@
         <input class="form-control mx-auto" type="password" size="40" name="password" style="width:75%" required maxlength="10"><br>
     </div>
       <div class="btns">
-      <input type="button" value="　戻る　" onclick="location.href='Home.php'" class="btn btn-outline-secondary mb-3">
+      <input type="button" value="　戻る　" onclick="location.href='index.php'" class="btn btn-outline-secondary mb-3">
       <input type="submit" value="登録する" class="btn1 btn mb-3">
       </div>
     </form>

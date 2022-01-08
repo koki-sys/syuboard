@@ -1,6 +1,6 @@
 +<?php
 require './database/connect.php';
-require 'loginkey.php';
+//require 'loginkey.php';
 use Connection;
 session_start();
 unset($_SESSION['error']);
@@ -25,8 +25,8 @@ unset($_SESSION['error']);
                 header('Location: login.php');
             }else{
                 //ログイン成功時
-                //$db_pass  = openssl_decrypt($row['password'], 'AES-128-ECB', $key);
-                $db_pass  = $row['password'];
+                $db_pass  = openssl_decrypt($row['password'], 'AES-128-ECB', $key);
+                // $db_pass  = $row['password'];
                 if($c_t == $db_pass){
                     $_SESSION['user']['name'] = $row['name'];
                     $_SESSION['user']['email'] = $row['email'];
