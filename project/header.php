@@ -25,7 +25,7 @@
                 </a>
             </li>
             <li class="nav-item mr-2 ml-3">
-                <a href="shinki.php">
+                <a href="newlogin.php">
                     <img src="./images/header/register.png" class="d-block mx-auto" width="25" height="auto" />
                     <p style="color: #B1CF5F; font-size: xx-small" class="text-center m-0">新規登録</p>
                 </a>

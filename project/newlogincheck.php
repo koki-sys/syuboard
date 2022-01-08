@@ -1,7 +1,7 @@
 <?php
 
     require './database/connect.php';
-    require 'loginkey.php';
+    // require 'loginkey.php';
     use Connection;
 
         $pass = $_POST['password'];
