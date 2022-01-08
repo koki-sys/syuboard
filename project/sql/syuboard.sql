@@ -48,7 +48,7 @@ CREATE TABLE mtag(
 
 CREATE TABLE telphone(
     groupid INT AUTO_INCREMENT,
-    telId CHAR(16) NOT NULL,
+    url VARCHAR(100) NOT NULL,
     title VARCHAR(32),
     customerid INT NOT NULL,
     mtagid INT NOT NULL,
