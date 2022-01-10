@@ -1,8 +1,3 @@
-<?php
-    if (isset($_SESSION["user"])) {
-        unset($_SESSION["user"]);
-    }
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,6 +9,12 @@
     <meta http-equiv="refresh" content="3;URL=./index.php">
     </head>
 <body>
+    <?php
+    session_start();
+    if (isset($_SESSION['user'])) {
+        unset($_SESSION['user']);
+    }
+    ?>
     <div class="container mt-5">
         <div class="row mt-5">
             <div class="col-6">
