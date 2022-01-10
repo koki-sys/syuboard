@@ -1,4 +1,4 @@
-<?php require 'header2.php'; ?>
+<?php require 'header.php'; ?>
 <?php
 require_once('./app/controller/TalkController.php');
 use Controller\TalkController;

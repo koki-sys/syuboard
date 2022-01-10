@@ -5,7 +5,7 @@
 <title>フレンド表示画面</title>
 <link rel="stylesheet" href="./css/frend.css" type="text/css">
 </head>
-<?php require './header2.php'; ?>
+<?php require './header.php'; ?>
 <body>
 <div class="container">
   <div class="container">

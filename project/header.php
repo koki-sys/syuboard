@@ -23,25 +23,25 @@
         </ul>
         <ul class="navbar-nav list-group list-group-horizontal">
             <li class="nav-item mr-2 ml-3">
-                <a href="login.php" class="text-center" style="color: #DEF4C6; font-size: xx-small">
+                <a href="friend.php" class="text-center" style="color: #DEF4C6; font-size: xx-small">
                     <img src="./images/header/add_friend.png" class="d-block mx-auto" width="25" height="auto" />
                     <p style="color: #DEF4C6; font-size: xx-small" class="text-center m-0">フレンド</p>
                 </a>
             </li>
             <li class="nav-item mr-2 ml-3">
-                <a href="shinki.php">
+                <a href="tellindex.php">
                     <img src="./images/header/call.png" class="d-block mx-auto" width="25" height="auto" />
                     <p style="color: #DEF4C6; font-size: xx-small" class="text-center m-0">通話</p>
                 </a>
             </li>
             <li class="nav-item mr-2 ml-3">
-                <a href="login.php" class="text-center" style="color: #DEF4C6; font-size: xx-small">
+                <a href="index.php" class="text-center" style="color: #DEF4C6; font-size: xx-small">
                     <img src="./images/header/chat.png" class="d-block mx-auto" width="25" height="auto" />
                     <p style="color: #DEF4C6; font-size: xx-small" class="text-center m-0">掲示板</p>
                 </a>
             </li>
             <li class="nav-item mr-2 ml-3">
-                <a href="login.php" class="text-center" style="color: #DEF4C6; font-size: xx-small">
+                <a href="#" class="text-center" style="color: #DEF4C6; font-size: xx-small">
                     <img src="./images/header/profile.png" class="d-block mx-auto" width="25" height="auto" />
                     <p style="color: #DEF4C6; font-size: xx-small" class="text-center m-0">プロフィール</p>
                 </a>
@@ -77,4 +77,4 @@
         </ul>
     </nav>
 
-    <?php endif;
+    <?php endif; ?>
