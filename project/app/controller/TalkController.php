@@ -42,7 +42,7 @@ class TalkController
      *
      * @author koki-sys
      */
-    public function create($customer_id, $title, $mtag, $stag)
+    public function create(int $customer_id, string $title, string $mtag, iterable $stag)
     {
         $pdo = conn();
 
