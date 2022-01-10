@@ -34,7 +34,7 @@ function add(){
     <div class="cp_iptxt">
     <label>メインタグ</label>
 	<p>※ご要望があれば追加します</p>
-    <select name="maintagu" style="width:80%">
+    <select name="mtag" style="width:80%">
         <option value="sports">スポーツ</option>
         <option value="hobby">ホビー</option>
         <option value="game">ゲーム</option>

@@ -29,6 +29,7 @@ unset($_SESSION['error']);
                 $db_pass = $row['password'];
                 var_dump($db_pass);
                 if ($c_t == $db_pass) {
+                    $_SESSION['user']['id'] = $row['customerid'];
                     $_SESSION['user']['name'] = $row['name'];
                     $_SESSION['user']['email'] = $row['email'];
                     $_SESSION['user']['password'] = $row['password'];

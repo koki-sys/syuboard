@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <meta http-equiv="refresh" content="3;URL=./index.php">
-    <style>
-        html,body {
-            background-color: #FCFCFC;
-        }
-    </style>
-    </head>
-<body >
-    <?php
+<?php
     session_start();
     if (isset($_SESSION['user'])) {
         unset($_SESSION['user']);
     }
-    ?>
-    <div class="container" style="margin-top: 8rem;">
-        <div class="d-flex align-items-center justify-content-center row">
-        <div class="col-6">
-            <img src="./images/logout/logout.png">
-        </div>
-        <div class="col-6">
-            <h3 class="text-center">ログアウトしました。トップページに移動します...</h3>
-        </div>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
-</html>
+    header("Location: index.php");
