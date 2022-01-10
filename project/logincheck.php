@@ -1,15 +1,14 @@
-+<?php
+<?php
 require './database/connect.php';
-//require 'loginkey.php';
+require 'loginkey.php';
 use Connection;
+
 session_start();
 unset($_SESSION['error']);
         $pass = $_POST['password'];
         $pdo = Connection\conn();
         $c_t = openssl_encrypt($pass, 'AES-128-ECB', $key);
         $nickname = $_POST["nickname"];
-
-
 
     try {
         $sql = $pdo -> prepare("select *,count(*) as cnt from customer where name = ?");
@@ -25,18 +24,19 @@ unset($_SESSION['error']);
                 header('Location: login.php');
             }else{
                 //ログイン成功時
-                $db_pass  = openssl_decrypt($row['password'], 'AES-128-ECB', $key);
+                $db_pass = openssl_decrypt($row['password'], 'AES-128-ECB', $key);
+                var_dump($db_pass);
                 // $db_pass  = $row['password'];
-                if($c_t == $db_pass){
+                if($pass == $db_pass){
                     $_SESSION['user']['name'] = $row['name'];
                     $_SESSION['user']['email'] = $row['email'];
                     $_SESSION['user']['password'] = $row['password'];
-                    header('Location: index.php');
+                    // header('Location: index.php');
                     exit;
                 }else{
                 $_SESSION['error'] = 'error1';
                 
-                header('Location: login.php');
+                //header('Location: login.php');
                 }
 
             }

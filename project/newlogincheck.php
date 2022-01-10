@@ -1,7 +1,7 @@
 <?php
 
     require './database/connect.php';
-    // require 'loginkey.php';
+    require 'loginkey.php';
     use Connection;
 
         $pass = $_POST['password'];
@@ -21,7 +21,7 @@
             $count = $sql->rowCount();
             if($count == 1){
                 // セッションにセットする処理を追加 koki-sys
-                
+
 
                 header('Location:index.php');
             }
