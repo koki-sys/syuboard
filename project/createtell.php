@@ -35,18 +35,18 @@ function add(){
     <label>メインタグ</label>
 	<p>※ご要望があれば追加します</p>
     <select name="mtag" style="width:80%">
-        <option value="sports">スポーツ</option>
-        <option value="hobby">ホビー</option>
-        <option value="game">ゲーム</option>
-        <option value="song/BGM">歌・BGM</option>
-        <option value="gambling">ギャンブル</option>
-        <option value="fashion">ファッション</option>
-        <option value="idol">アイドル</option>
-        <option value="animal">アニマル</option>
-        <option value="book">本</option>
-        <option value="movie">映画</option>
-        <option value="chat">雑談</option>
-        <option value="outdoors">アウトドア</option>
+        <option value="スポーツ">スポーツ</option>
+        <option value="ホビー">ホビー</option>
+        <option value="ゲーム">ゲーム</option>
+        <option value="歌・BGM">歌・BGM</option>
+        <option value="ギャンブル">ギャンブル</option>
+        <option value="ファッション">ファッション</option>
+        <option value="アイドル">アイドル</option>
+        <option value="アニマル">アニマル</option>
+        <option value="本">本</option>
+        <option value="映画">映画</option>
+        <option value="雑談">雑談</option>
+        <option value="アウトドア">アウトドア</option>
     </select>
     <span class="focus_line"><i></i></span>
     </div>
