@@ -15,7 +15,7 @@
 
 <body>
     <?php if (isset($_SESSION['user'])) : ?>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <ul class="navbar-nav mr-auto">
             <a class="logo d-block" href="./index.php">
                 <img src="./images/header/syuboard.png" alt="logo" width="200" height="auto">
@@ -55,7 +55,7 @@
         </ul>
     </nav>
     <?php else : ?>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <ul class="navbar-nav mr-auto">
             <a class="logo d-block" href="./index.php">
                 <img src="./images/header/syuboard.png" alt="logo" width="200" height="auto">
