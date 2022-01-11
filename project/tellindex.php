@@ -46,7 +46,8 @@ $talk = $talks->index();
                             </div>
                             <div class="col-4"><span>主：<?= $result["name"] ?></span>
                             </div>
-                            <div class="col-5"><a class="btn float-right submit-btn">通話開始</a>
+                            <div class="col-5"><a class="btn float-right submit-btn"
+                                    href='<?= $result["url"] ?>'>通話開始</a>
                             </div>
                         </div>
                     </div>
