@@ -37,6 +37,27 @@ class TalkController
     }
 
     /**
+     * 通話スレッドを検索するためのメソッド
+     *
+     * @author koki-sys
+     *
+     * @param string $keyword
+     * @return array $search_array
+     */
+    public function search(string $keyword)
+    {
+        $pdo = conn();
+        $sql = "select * from telphone join customer ".
+        "on telphone.customerid = customer.customerid join mtag on mtag.mtagid = telphone.mtagid ".
+        "join stag on mtag.stagid = stag.stagid where telphone.title LIKE ?";
+        $search_query = $pdo->prepare($sql);
+        $search_query->execute(["%".$keyword."%"]);
+        $search_array = $search_query->fetchAll();
+
+        return $search_array;
+    }
+
+    /**
      * 通話スレッドを作成するメソッド
      *
      * 通話スレッドの作成と、通話URLの保存

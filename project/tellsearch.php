@@ -1,24 +1,28 @@
-<?php require 'header.php'; ?>
 <?php
+
 require_once('./app/controller/TalkController.php');
+
 use Controller\TalkController;
 
-$talks = new TalkController();
-$talk = $talks->index();
-?>
+$talk = new TalkController;
 
+$keyword = $_POST["search"];
+
+// 実行するメソッドの追加
+$search = $talk->search($keyword);
+?>
+<?php require 'header.php'; ?>
 <body>
     <div class="container-fluid">
         <div class="row mt-4 ml-4">
             <div class="col-md-1"></div>
             <div class="col-md-5">
-                <h2 class="page-title">通話一覧</h2>
+                <h2 class="page-title">「<?= $keyword ?>」の検索結果</h2>
             </div>
             <div class="col-md-4">
                 <form action="./tellsearch.php" method="post">
                     <input type="text" name="search" class="form-control" placeholder="タイトルで検索" />
                 </form>
-
             </div>
             <div class="col-md-2 mt-2"><a class="submit-btn rounded" href="./createtell.php">通話を作成</a>
             </div>
@@ -26,7 +30,7 @@ $talk = $talks->index();
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-6 mt-3" id="board-area">
-                <?php foreach ($talk as $result) : ?>
+                <?php foreach ($search as $result) : ?>
                 <div class="board card shadow-sm mt-3"
                     id="talk<?= $result["mtagid"] ?>"
                     style="z-index: 1;position: relative">
@@ -87,4 +91,4 @@ $talk = $talks->index();
             }
         }
     </script>
-    <?php require 'footer.php';
+<?php require 'footer.php'; ?>
