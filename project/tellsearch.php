@@ -9,4 +9,4 @@ $talk = new TalkController;
 $keyword = $_POST["search"];
 
 // 実行するメソッドの追加
-// $talk->search($keyword);
+$result = $talk->search($keyword);
