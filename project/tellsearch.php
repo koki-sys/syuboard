@@ -12,6 +12,7 @@ $keyword = $_POST["search"];
 $search = $talk->search($keyword);
 ?>
 <?php require 'header.php'; ?>
+
 <body>
     <div class="container-fluid">
         <div class="row mt-4 ml-4">
@@ -28,6 +29,7 @@ $search = $talk->search($keyword);
             </div>
         </div>
         <div class="row">
+            <?php if (!empty($search)) : ?>
             <div class="col-md-2"></div>
             <div class="col-md-6 mt-3" id="board-area">
                 <?php foreach ($search as $result) : ?>
@@ -74,10 +76,21 @@ $search = $talk->search($keyword);
             </div>
             <div class="col-md-4">
                 <div class="float-right mr-3">
-
                 </div>
             </div>
+            <?php else : ?>
+            <div class="col-md-3"></div>
+            <div class="col-md-3 mt-5">
+                <img src="./images/telephone/searchfail.png" alt="検索失敗" class="d-block mx-auto">
+            </div>
+            <div class="col-md-3 mt-5">
+                <h4 class="text-center">何も見つかりませんでした</h4><br/>
+                <p class="text-center ml-3">🔍別の検索キーワードで探してみてください。</p>
+            </div>
+            <div class="col-md-3"></div>
+            <?php endif; ?>
         </div>
+
     </div>
     <script type="text/javascript">
         const dispBox = (id) => {
@@ -91,4 +104,4 @@ $search = $talk->search($keyword);
             }
         }
     </script>
-<?php require 'footer.php'; ?>
+    <?php require 'footer.php';
