@@ -15,8 +15,8 @@ $talk = $talks->index();
                 <h2 class="page-title">通話一覧</h2>
             </div>
             <div class="col-md-4">
-                <form action="#" method="post">
-                    <input type="text" class="form-control" placeholder="タグor部屋名で検索" />
+                <form action="./tellsearch.php" method="post">
+                    <input type="text" name="search" class="form-control" placeholder="タグor部屋名で検索" />
                 </form>
 
             </div>
