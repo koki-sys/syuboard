@@ -10,7 +10,6 @@ namespace Module;
  */
 class FormCheck
 {
-
     /**
      * タイトルが入っているかどうかのチェック
      *
@@ -19,7 +18,7 @@ class FormCheck
      * @param $title
      * @return boolean
      */
-    public function titleExists($title)
+    public function titleExists(?string $title)
     {
         if(isset($title)){
             return true;
@@ -35,7 +34,7 @@ class FormCheck
      * @param $mtag
      * @return boolean
      */
-    public function mtagExists($mtag)
+    public function mtagExists(?string $mtag)
     {
         if(isset($mtag)){
             return true;
