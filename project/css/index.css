@@ -86,3 +86,28 @@ nav {
     padding: 0.5rem;
     margin: 0.7em;
 }
+
+div .tell-btn {
+    background-color: #1c7c54;
+    color: #fcfcfc;
+}
+
+.tell-main-tag {
+    background-color: #fcfcfc;
+    color: #b1cf5f;
+    border: 1px solid #b1cf5f;
+    border-radius: 5px;
+    padding: 0.5em;
+    text-align: center;
+}
+
+div .submit-btn {
+    background-color: #1c7c54;
+    color: #fcfcfc;
+    padding: 0.7rem;
+}
+
+div .submit-btn:hover {
+    background-color:#29ad76;
+    color: #e7e7e7;
+}

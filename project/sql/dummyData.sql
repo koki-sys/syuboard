@@ -83,7 +83,7 @@ values
 insert into
     telphone(
         groupid,
-        telId,
+        url,
         title,
         customerid,
         mtagid

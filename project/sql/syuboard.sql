@@ -16,14 +16,14 @@ CREATE TABLE customer (
     customerid INT AUTO_INCREMENT,
     name VARCHAR(40) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    password CHAR(12) NOT NULL,
+    password VARCHAR(50) NOT NULL,
     icon_path VARCHAR(50) NOT NULL,
     PRIMARY KEY(customerid)
 );
 
 CREATE TABLE owner(
     ownerid INT AUTO_INCREMENT,
-    password CHAR(12) NOT NULL,
+    password VARCHAR(50) NOT NULL,
     name VARCHAR(40) NOT NULL,
     PRIMARY KEY(ownerid)
 );
@@ -48,7 +48,7 @@ CREATE TABLE mtag(
 
 CREATE TABLE telphone(
     groupid INT AUTO_INCREMENT,
-    telId CHAR(16) NOT NULL,
+    url VARCHAR(100) NOT NULL,
     title VARCHAR(32),
     customerid INT NOT NULL,
     mtagid INT NOT NULL,

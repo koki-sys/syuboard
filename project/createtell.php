@@ -8,7 +8,7 @@
 <script type="text/javascript">
 var i=1;
 function add(){
-    if(i <= 6){
+    if(i <= 5){
         var input_data = document.createElement('input');
         input_data.type = 'text';
         input_data.id = 'subtag_' + i;
@@ -17,28 +17,24 @@ function add(){
         parent.appendChild(input_data);
         i++;
     }
-   
 }
 </script>
 </head>
 <?php require './header.php'; ?>
 <body>
 <div class="container">
- <form action="createtellcheck.php" method="post"> 
-
+<form action="createtellcheck.php" method="post"> 
     <div class="element"></div>
     <div class="ct_iptxt p20">
 	<label class="et">
     <input class="form-control mx-auto" type="text" size="32" name="title" style="width:200%" required placeholder="タイトルを入力してください"><br>
     </label>
     </div>
-
- 
     <div class="p20">
     <div class="cp_iptxt">
     <label>メインタグ</label>
-	    <p>※ご要望があれば追加します</p>
-    <select name="maintagu" style="width:80%">
+	<p>※ご要望があれば追加します</p>
+    <select name="mtag" style="width:80%">
         <option value="sports">スポーツ</option>
         <option value="hobby">ホビー</option>
         <option value="game">ゲーム</option>
@@ -67,6 +63,5 @@ function add(){
 </form>
 </div>
 </div>
-   
 </body>
 </html>

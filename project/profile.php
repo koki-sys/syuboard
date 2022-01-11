@@ -5,7 +5,7 @@
 <title>SYUBOARDプロフィール画面</title>
 <link rel="stylesheet" href="./css/profile.css" type="text/css">
 </head>
-<?php require './header2.php'; ?>
+<?php require './header.php'; ?>
 <body>
 <h2 style="position: absolute; top: 100px; left: 140px;">プロフィール</h2>
   <div class="container">

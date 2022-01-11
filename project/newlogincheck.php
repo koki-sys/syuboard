@@ -20,6 +20,9 @@
             
             $count = $sql->rowCount();
             if($count == 1){
+                // セッションにセットする処理を追加 koki-sys
+
+
                 header('Location:index.php');
             }
             else{?>
