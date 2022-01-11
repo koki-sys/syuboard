@@ -21,7 +21,7 @@ $search = $talk->search($keyword);
             </div>
             <div class="col-md-4">
                 <form action="./tellsearch.php" method="post">
-                    <input type="text" name="search" class="form-control" placeholder="タグor部屋名で検索" />
+                    <input type="text" name="search" class="form-control" placeholder="タイトルで検索" />
                 </form>
             </div>
             <div class="col-md-2 mt-2"><a class="submit-btn rounded" href="./createtell.php">通話を作成</a>

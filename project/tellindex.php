@@ -16,7 +16,7 @@ $talk = $talks->index();
             </div>
             <div class="col-md-4">
                 <form action="./tellsearch.php" method="post">
-                    <input type="text" name="search" class="form-control" placeholder="タグor部屋名で検索" />
+                    <input type="text" name="search" class="form-control" placeholder="タイトルで検索" />
                 </form>
 
             </div>
