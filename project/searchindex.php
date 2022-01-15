@@ -1,22 +1,25 @@
-<?php require './header.php' ?>
+<?php require './header2.php' ?>
 <?php
 require_once('./app/controller/BoardController.php');
 use Controller\BoardController;
 
+$search = $_POST['search'];
 $boards = new BoardController();
 $board = $boards->index();
+
+
 ?>
-<script src="prefixfree.min.js"></script>
+
 <body>
     <div class="container-fluid">
         <div class="row mt-4 ml-4">
             <div class="col-md-1"></div>
             <div class="col-md-7">
-                <h2 class="page-title">掲示板</h2>
+                <h2 class="page-title">「<?php echo $search ?>」の検索結果</h2>
             </div>
             <div class="col-md-3">
-                <form action="searchindex.php" method="post">
-                    <input type="text" name="search" class="form-control" placeholder="ジャンル名で検索" />
+                <form action="#" method="post">
+                    <input type="text" class="form-control" placeholder="ジャンル名で検索" / name="search" >
                 </form>
             </div>
             <div class="col-md-1"></div>
@@ -24,6 +27,7 @@ $board = $boards->index();
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-6 mt-3" id="board-area">
+            <?php if(isset($board)):?>
                 <?php foreach ($board as $result) : ?>
                 <div class="board card shadow-sm mt-3"
                     id="board<?= $result["mtagid"] ?>"
@@ -53,15 +57,18 @@ $board = $boards->index();
                     <?php endfor; ?>
                 </div>
                 <?php endforeach; ?>
+            <?php else:?>
+                <p class="alert alert-danger">検索対象は見つかりませんでした</p>
+            <?php endif; ?>
             </div>
             <div class="col-md-2"></div>
-        </div>
-        <div style="position:fixed;right:20px;bottom:10px;">
-        <div class="clearfix">
-            <div class="floatright"><button>＋</button></div>
-                <article id="box" style="display:none">
+            <div style="position:fixed;right:20px;bottom:10px;">
+                <div class="clearfix">
+                    <div class="floatright"><button>＋</button></div>
+                    <article id="box" style="display:none">
                     <a href="createthread.php" class="button2 right">スレッドを立てる</a>
-                </article>
+                    </article>
+                </div>
             </div>
         </div>
     </div>
