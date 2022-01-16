@@ -74,3 +74,11 @@ CREATE TABLE post(
     PRIMARY KEY(postid),
     FOREIGN KEY(boardid) REFERENCES board(boardid)
 );
+
+CREATE TABLE friend(
+    id INT AUTO_INCREMENT,
+    friend_id INT NOT NULL,
+    customer_id INT NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY(customer_id) REFERENCES customer(customerid)
+);
